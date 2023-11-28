@@ -3,6 +3,11 @@
 namespace modules\main;
 
 use Craft;
+use craft\base\ElementInterface;
+use craft\elements\Entry;
+use craft\events\BlockTypesEvent;
+use craft\fields\Matrix;
+use yii\base\Event;
 use yii\base\Module as BaseModule;
 
 /**
@@ -28,7 +33,6 @@ class Module extends BaseModule
         // Defer most setup tasks until Craft is fully initialized
         Craft::$app->onInit(function() {
             $this->attachEventHandlers();
-            // ...
         });
     }
 
@@ -36,5 +40,45 @@ class Module extends BaseModule
     {
         // Register event handlers here ...
         // (see https://craftcms.com/docs/4.x/extend/events.html to get started)
+
+        Event::on(
+            Matrix::class,
+            Matrix::EVENT_SET_FIELD_BLOCK_TYPES,
+            function(BlockTypesEvent $event) {
+                $this->hideListItemBlockType($event->element, $event->sender, $event->blockTypes);
+            });
+    }
+
+    /**
+     * Hide the list item block type for a specific field and element.
+     *
+     * @param ElementInterface $element The element to check.
+     * @param object $field The field to check.
+     * @param array $blockTypes The array of block types to modify.
+     * @return void
+     */
+    private function hideListItemBlockType(ElementInterface $element, object $field, array &$blockTypes): void
+    {
+        // Only handle entries
+        if (!$element instanceof Entry) {
+            return;
+        }
+
+        // Don't touch section article
+        if ($element->section->handle === 'article') {
+            return;
+        }
+
+        // Only bodyContent field
+        if ($field->handle !== 'bodyContent') {
+            return;
+        }
+
+        // Hide list item block type
+        foreach ($blockTypes as $i => $blockType) {
+            if ($blockType->handle === 'listItem') {
+                unset($blockTypes[$i]);
+            }
+        }
     }
 }
