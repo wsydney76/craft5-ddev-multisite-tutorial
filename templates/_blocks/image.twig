@@ -1,0 +1,31 @@
+{% from '_macros/lib.twig' import img %}
+
+{% set isWide = block.style.contains('wide') %}
+
+{# Get image from block. This may be eager loaded or not #}
+{% set image = block.image.one %}
+
+{# Play it safe. Although an image is required, it may be missing when live previewing a draft #}
+{% if image %}
+
+    {# Conditionally apply styles #}
+    <figure class="{{ isWide ? 'xl:-mx-24' }}">
+
+        {# Output the image with specific dimensions #}
+        {{ img(image, {
+            transform: isWide ? {width: 1024, height: 450} : {width: 800, height: 350}
+        }) }}
+
+        {# Add caption if there is something to output #}
+        {% if block.caption or image.copyright %}
+            <figcaption class="flex justify-between">
+                <div>
+                    {{ block.caption }}
+                </div>
+                <div>
+                    {{ 'Photo'|t }}: {{ image.copyright }}
+                </div>
+            </figcaption>
+        {% endif %}
+    </figure>
+{% endif %}

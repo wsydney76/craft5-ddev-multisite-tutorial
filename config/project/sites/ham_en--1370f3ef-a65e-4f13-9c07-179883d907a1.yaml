@@ -1,0 +1,9 @@
+baseUrl: '@web/hamburg/en'
+enabled: '1'
+handle: ham_en
+hasUrls: true
+language: en-US
+name: 'Hamburg English'
+primary: false
+siteGroup: 6ef5e992-55f6-464f-b946-3eda031693df # Hamburg
+sortOrder: 2

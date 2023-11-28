@@ -1,0 +1,9 @@
+baseUrl: '@web/munich/en'
+enabled: '1'
+handle: muc_en
+hasUrls: true
+language: en-US
+name: 'Munich English'
+primary: false
+siteGroup: 1a974179-ff63-42af-9f2f-b2c34cbfefe2 # Munich
+sortOrder: 8

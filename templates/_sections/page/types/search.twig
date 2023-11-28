@@ -1,0 +1,78 @@
+{# Search functionality #}
+
+{# request query parameters and there defaults #}
+{% set searchQuery = craft.app.request.queryParam('q', '') %}
+{% set allSites = craft.app.request.queryParam('allSites', '') %}
+
+{# The search form #}
+
+<form class="border border-brand-300 bg-white p-4 shadow-md dark:bg-brand-800 md:flex md:items-center md:space-x-4 rtl:md:space-x-reverse">
+
+    <label class="mb-1 block whitespace-nowrap font-bold text-brand-500 dark:text-brand-200 md:mb-0 md:text-right"
+           for="search-query">
+        {{ 'Search for:'|t }}
+    </label>
+
+    <input type="search"
+           id="search-query"
+           autofocus
+           class="mb-1 w-full"
+           name="q"
+           value="{{ searchQuery }}">
+
+    <input type="checkbox"
+           id="search-allsites"
+            {{ allSites ? 'checked' }}
+           name="allSites">
+    <label for="search-allsites">
+        {{ 'Search in all sites'|t }}
+    </label>
+
+    {% include '_layouts/partials/button.twig' with {
+        type: 'submit',
+        caption: 'Start'|t
+    } only %}
+
+
+</form>
+
+{# The search results #}
+
+{% if searchQuery %}
+
+    {% set query = craft.entries()
+        .section('article,page')
+        .search(searchQuery)
+        .orderBy('score') %}
+
+    {# modifiy the query for searching in all sites #}
+    {% if allSites %}
+        {% set preferredSites = craft.app.sites.allSites
+            | filter(site => site.language == currentSite.language)
+            | map(site => site.handle) %}
+        {% do query
+            .site('*')
+            .unique()
+            .preferSites(preferredSites) %}
+    {% endif %}
+
+    {# This is actually a redundant query, but we need the count here... #}
+    {% set count = query.count %}
+
+    {# found something? #}
+    {% if count %}
+        <h2 class="my-8 text-xl">{{ count }} {{ '{count,plural,=1{search result} other{search results}}'|t({count: count}) }}</h2>
+
+        {# output hits #}
+        {% include '_partials/entries-list.twig' with {
+            paginate: true,
+            query
+        } only %}
+
+    {% else %}
+        {# Nope #}
+        <div class="mt-4">
+            {{ 'Your search for "{q}" didn’t return any results.'|t({q: searchQuery, count: count}) }}
+        </div>
+    {% endif %}
+{% endif %}

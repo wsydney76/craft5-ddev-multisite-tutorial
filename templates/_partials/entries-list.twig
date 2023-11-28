@@ -1,0 +1,132 @@
+{# Configurable component that outputs a collection of entries as cardlets #}
+
+{# Untranslated heading (optional).
+    Will be translated here, because we have the count available here, needed for singular/plural translations #}
+{% set heading = heading ?? null %}
+
+{# This include works for paginated and unpaginated content #}
+{% set paginate = paginate is defined ? paginate : false %}
+{% set paginationLimit = paginationLimit ?? craft.app.config.custom.paginationLimit ?? 12 %}
+
+{# Enable different layouts #}
+{% set layout = layout ?? 'default' %}
+
+{# Set up a loopup table with different configs for all available layouts
+    default: One cardlet per line
+    columns: Two cardlets per line
+    small: Image and title only
+#}
+{% set layouts = {
+    default: {
+        transform: {width: 180, height: 120},
+        gridClasses: 'gap-8',
+        titleClasses: 'line-clamp-2 text-2xl font-semibold',
+        linkClasses: '',
+        showText: true,
+        truncate: 160
+    },
+    columns: {
+        transform: {width: 120, height: 120},
+        gridClasses: 'md:grid-cols-2 gap-8',
+        titleClasses: 'line-clamp-2 text-2xl font-semibold',
+        linkClasses: '',
+        showText: true,
+        truncate: 80
+    },
+    small: {
+        transform: {width: 60, height: 60},
+        gridClasses: 'grid-cols-3 gap-8',
+        titleClasses: 'line-clamp-2 text-lg',
+        linkClasses: 'items-center',
+        showText: false,
+        truncate: 0
+    },
+} %}
+
+{# The layout we will finally use. #}
+{% set layout = layouts[layout] %}
+
+{# Using andWith for eager loading, so that we do not overwrite conditions already set on the query #}
+
+{# Eager load image + transform #}
+{% set query = query
+    .andWith(
+    ['featuredImage', {withTransforms: [layout.transform]}]
+) %}
+
+{# Eager load the first text block #}
+{% if layout.showText %}
+    {% do query.andWith(
+        ['bodyContent', {type: 'text', limit: 1}]
+    ) %}
+{% endif %}
+
+{# Execute the query. Make sure the same variables are set for further processing. #}
+{% if paginate %}
+    {# get entries for the required page #}
+    {% paginate query.limit(paginationLimit) as pageInfo, entries %}
+    {% set count = pageInfo.total %}
+{% else %}
+    {# get all entries #}
+    {% set entries = query.collect %}
+    {% set count = entries|length %}
+{% endif %}
+
+
+{# |length works for both arrays and collections #}
+{% if entries|length %}
+    <div>
+        {% if heading %}
+            <h2 class="mb-6 mt-8 text-2xl font-semibold">{{ heading|t({count}) }}</h2>
+        {% endif %}
+
+        {# Output entries in a grid using the cardlet embed #}
+        <div class="mb-8 grid {{ layout.gridClasses }}">
+            {% for entry in entries %}
+                <div>
+
+                    {# We don't use 'with {} only' here because we can't predict what the include needs
+                        Additional params may be passed to this template that need to be passed through.
+                    #}
+                    {% embed '_partials/cardlet.twig' with {
+                        image: entry.featuredImage.one,
+                        title: entry.title,
+                        url: entry.url,
+                        transform: layout.transform,
+                        linkClasses: layout.linkClasses,
+                        titleClasses: layout.titleClasses,
+                    } %}
+
+                        {% block content %}
+                            {% if layout.showText %}
+                                {# This can only be a text block because of the eager loading condition #}
+                                {% set block = entry.bodyContent.one %}
+                                {% if block %}
+                                    {# line-clamp and truncate seem to be redundant,
+                                        but we want to be sure we have max 2 lines
+                                        without sending all the text to the browser
+                                    #}
+                                    <div class="line-clamp-2">
+                                        {# Avoid any html or markdown text in the output #}
+                                        {{ block.text|md|striptags|truncate(layout.truncate) }}
+                                    </div>
+                                {% endif %}
+
+                                {# Include section spefific content #}
+                                {% include "_sections/#{entry.section.handle}/card-content.twig" ignore missing %}
+                            {% endif %}
+                        {% endblock %}
+
+                    {% endembed %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+{# Show pagination links #}
+{% if pageInfo is defined %}
+    {% include '_partials/pagination.twig' with {
+        pageInfo
+    } only %}
+{% endif %}

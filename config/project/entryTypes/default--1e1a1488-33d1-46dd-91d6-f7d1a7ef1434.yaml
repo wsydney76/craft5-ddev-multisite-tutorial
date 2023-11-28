@@ -1,0 +1,83 @@
+fieldLayouts:
+  7ec9ceec-1b89-4341-bd80-ecb0762c7a01:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e5cd2e98-d32f-4d0d-b0e0-1a3789d693d7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 491e5a77-e5a3-4c57-8a40-e7af97b1cd20
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 159d0312-be83-4aac-a7f3-0e309b47d439
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 77fa098d-6b8f-48f1-9686-e70932830f94
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            template: _cp/related-entries.twig
+            type: craft\fieldlayoutelements\Template
+            uid: 47cd7a1b-42b9-4167-923e-c2a0801de697
+            userCondition: null
+            width: 100
+        name: Posts
+        uid: f02f9a31-8193-4e0f-9c45-37b9b863edd4
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 599c71b9-f295-4a4d-b1c3-7792f4da3dd6 # Topic
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: language
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: language

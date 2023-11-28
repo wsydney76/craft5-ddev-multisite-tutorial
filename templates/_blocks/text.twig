@@ -1,0 +1,2 @@
+{# Pure markdown would allow malicious code like <script> #}
+{{ block.text|md|purify }}

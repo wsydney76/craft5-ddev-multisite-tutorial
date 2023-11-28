@@ -1,0 +1,6 @@
+{# Add count of related articels to cardlet #}
+
+{% set count = craft.entries.section('article').topics(entry).count %}
+<div class="text-sm font-semibold text-brand-600 dark:text-brand-300">
+    {{ count }} {{ '{count,plural,=1{article} other{articles}}'|t({count}) }}
+</div>

@@ -1,0 +1,23 @@
+{# CP template ui element. Show conflicting drafts #}
+
+{% set entries = craft.entries
+    .draftOf(element)
+    .provisionalDrafts(null)
+    .id('not ' ~ element.id)
+.collect %}
+{% if entries.count %}
+    <div class="readable">
+        <blockquote class="note warning">
+
+            {{ '{count,plural,=1{Draft exists} other{Drafts exist}}'|t({count: entries.count}) }}:
+
+            {% for entry in entries %}
+                <div>
+                    <a href="{{ entry.cpEditUrl }}">{{ entry.title }}</a>
+                    ({{ entry.isProvisionalDraft ? 'Provisional ' }}{{ entry.draftName }}, {{ entry.creator.name }}
+                    , {{ craft.app.formatter.asRelativeTime(entry.dateCreated) }})
+                </div>
+            {% endfor %}
+        </blockquote>
+    </div>
+{% endif %}

@@ -1,0 +1,82 @@
+fieldLayouts:
+  a70a5bb4-2def-4e0e-a7ea-695b5ed884f2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8a5f169c-2faf-40a8-bb79-d61bfc3e3942
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4d5309b4-c726-40b9-a00e-2880f8a20b80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce1b9abb-61e9-4815-8486-a3bc9063ed09
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 30cfb989-f158-4630-9bde-19f468e9519c # Wide Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 130dff67-c8fe-4e57-bd48-4275a86b9c11
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c2a690a1-0974-4138-89aa-ec3f8ba85385
+        userCondition: null
+handle: articlesIndex
+hasTitleField: true
+name: 'Articles Index'
+section: 84b98802-2548-4aed-b67e-fc97f6ed9e30 # Page
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: language
+sortOrder: 4
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: language

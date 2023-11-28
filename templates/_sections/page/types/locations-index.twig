@@ -1,0 +1,8 @@
+{# Output locations #}
+
+{% include '_partials/entries-list.twig' with {
+    layout: 'columns',
+    query: craft.entries
+        .section('location')
+        .orderBy('title')
+} only %}

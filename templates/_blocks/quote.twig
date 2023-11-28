@@ -1,0 +1,14 @@
+{# Opt out of tailwinds prose stuff, apply custom styles #}
+<blockquote class="not-prose my-16 border-l-4 border-brand-300 py-4 ps-8 text-brand-600 dark:text-brand-300 md:mx-12">
+    <p class="font-semibold text-2xl font-serif italic">
+        {# Quotation marks look different in every language! #}
+        {{ '“'|t }} {{ block.text }} {{ '”'|t }}
+    </p>
+    {% if block.attribution %}
+        <footer class="mt-2">
+            <cite class="not-italic">
+                &mdash; {{ block.attribution }}
+            </cite>
+        </footer>
+    {% endif %}
+</blockquote>

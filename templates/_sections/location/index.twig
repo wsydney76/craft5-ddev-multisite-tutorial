@@ -1,0 +1,16 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+    {% if entry.address %}
+
+        {% embed '_layouts/partials/box.twig' %}
+            {% block content %}
+                {{ entry.address|nl2br }}
+            {% endblock %}
+        {% endembed %}
+
+        {# Output list items where this location is related #}
+        {% include '_sections/location/mentions.twig' %}
+
+    {% endif %}
+{% endblock %}

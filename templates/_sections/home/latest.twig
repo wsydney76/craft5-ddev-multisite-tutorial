@@ -1,0 +1,22 @@
+{# show 2 latest articels (not featured) in small cardlet layout #}
+
+{% set limit = 2 %}
+{% set query = craft.entries
+    .section('article')
+    .limit(limit)
+    .featured(false)
+    .orderBy('postDate desc') %}
+
+{% include '_partials/entries-list.twig' with {
+    heading: 'Latest Articles',
+    query: query
+} only %}
+
+{# Link to article index if there are more then 2 articles #}
+{% set more = query.count - limit %}
+{% if more >= 1 %}
+    {% set indexEntry = craft.entries.section('page').type('articlesIndex').one %}
+    <a href="{{ indexEntry ? indexEntry.url : '' }}" class="mt-4">
+        {{ 'and'|t }} {{ more }} {{ '{more,plural,=1{more article} other{more articles}}'|t({more: more}) }}
+    </a>
+{% endif %}

@@ -1,0 +1,25 @@
+{% extends "_layouts/main.twig" %}
+
+{% if entry.wideContent %}
+    {% do _globals.set('mainWidth', 'lg') %}
+{% endif %}
+
+{% block content %}
+    {% if entry.address %}
+
+        {% embed '_layouts/partials/box.twig' %}
+            {% block content %}
+                {{ entry.address|nl2br }}
+            {% endblock %}
+        {% endembed %}
+
+    {% endif %}
+
+    {# include entry type specific content before content #}
+    {% include "_sections/page/types/#{entry.type.handle|kebab}.twig" ignore missing with {entry} only %}
+
+    {{ parent() }}
+
+    {# include entry type specific content after content #}
+    {% include "_sections/page/types/#{entry.type.handle|kebab}-aftercontent.twig" ignore missing with {entry} only %}
+{% endblock %}

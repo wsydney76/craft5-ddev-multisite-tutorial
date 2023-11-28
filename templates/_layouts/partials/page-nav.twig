@@ -1,0 +1,6 @@
+{# Just links to all pages for now #}
+{% for entry in craft.entries.section('page').collect %}
+    {# Highlight if this is the current uri #}
+    {{ entry.link|attr({class: craft.app.request.segment(1) == entry.slug ? 'font-semibold'}) }}
+{% endfor %}
+

@@ -1,0 +1,55 @@
+defaultPlacement: end
+enableVersioning: true
+handle: page
+name: Page
+propagationMethod: all
+siteSettings:
+  5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Berlin English
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  9eab0798-59cc-46ce-b621-7f5fbca4ac01: # Monaco Italiano
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  74bdc2b4-7971-4bf7-ae69-c90f54f03c60: # Soltau Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  733a21de-d87c-45c5-9a67-c91c5a3f6172: # Munich Hebrew
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  1370f3ef-a65e-4f13-9c07-179883d907a1: # Hamburg English
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  6293568b-45d8-41e5-a79e-9c084dc06cd3: # München Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  65355561-253f-4578-abb7-0e27ed694878: # Berlin Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  cc5167a2-3fc7-4600-bcef-c928500a7155: # Hamburg Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+  f0cfaa93-fb17-46e7-aeff-cc02cf25aeee: # Munich English
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/page
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 90b11039-2eba-48d9-9e4a-bcbb8797204c
+type: structure

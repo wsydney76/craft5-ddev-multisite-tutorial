@@ -1,0 +1,9 @@
+baseUrl: '@web/'
+enabled: true
+handle: default_de
+hasUrls: true
+language: de-DE
+name: 'Default Deutsch'
+primary: true
+siteGroup: b4d80b0f-48b3-4b07-a046-5008ae50f05e # Default
+sortOrder: 6

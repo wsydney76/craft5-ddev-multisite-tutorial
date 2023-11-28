@@ -1,0 +1,44 @@
+{# @var article \craft\elements\Entry #}
+
+{#
+Get related entries with corresponding list items blocks
+
+This looks a bit weird, but we couldn't figure out how to
+query for related matrix blocks ordered by fields from their parent.
+Also no eagerloading of parents?
+
+So query for related articles, that can be sorted
+and eager load the related matrix block.
+#}
+
+{% set articles = craft.entries
+    .section('article')
+    .relatedTo({targetElement: entry, field: 'bodyContent.location'})
+    .with([
+        ['bodyContent', {
+            type: 'listItem',
+            relatedTo: {targetElement: entry, field: 'location'}
+        }]
+    ])
+    .orderBy('postDate desc')
+.collect %}
+
+{% if articles %}
+    <div class="prose prose-lg mt-8 dark:prose-invert">
+        <div class="space-y-12">
+            {% for article in articles %}
+                <div>
+                    <h2>{{ article.link|attr({class: 'no-underline'}) }}</h2>
+                    {% for block in article.bodyContent.all %}
+                        <div>
+                            {% include '/_blocks/listItem.twig' with {
+                                block,
+                                context: 'location'
+                            } only %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

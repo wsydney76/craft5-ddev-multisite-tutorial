@@ -1,0 +1,19 @@
+columnSuffix: fnghrzxi
+contentColumnType: text
+fieldGroup: 169ccd00-9c12-4921-b187-8ef8ca2ad525 # Assets
+handle: homeText
+instructions: 'Sitespecific intro on home page'
+name: 'Home Text'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

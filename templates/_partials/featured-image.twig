@@ -1,0 +1,22 @@
+{# Output the featured image #}
+
+{% from '_macros/lib.twig' import img %}
+{% if featuredImage %}
+    <figure>
+        {# This is always above the fold, so do not load it lazily #}
+        {{ img(featuredImage, {
+            transform: {width: 1200, height: 400},
+            srcset: [960, 640, 400],
+            attr: {
+                loading: null,
+                fetchpriority: 'high'
+            }
+        }) }}
+        {% if featuredImage.copyright %}
+            <figcaption class="mt-1 text-right font-semibold text-sm text-gray-500">
+                {{ 'Photo'|t }}: {{ featuredImage.copyright }}
+            </figcaption>
+        {% endif %}
+    </figure>
+
+{% endif %}

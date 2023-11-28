@@ -1,0 +1,15 @@
+{# Simple component for showing prev/next links #}
+
+{% set prev = entry.prev(condition) %}
+{% set next = entry.next(condition) %}
+
+{% if prev or next %}
+    <div class="mt-8 flex justify-between pt-8">
+        <div>
+            {% if prev %}<a href="{{ prev.url }}">&lt; {{ prev.title }}</a>{% endif %}
+        </div>
+        <div class="text-right">
+            {% if next %}<a href="{{ next.url }}">{{ next.title }} &gt;</a>{% endif %}
+        </div>
+    </div>
+{% endif %}

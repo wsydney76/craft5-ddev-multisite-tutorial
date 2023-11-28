@@ -1,0 +1,24 @@
+{# Article index #}
+
+<div class="space-y-16">
+    {# Show featured articles on page one #}
+    {% if craft.app.request.pageNum == 1 %}
+        {% include '_partials/entries-list.twig' with {
+            query: craft.entries
+                .section('article')
+                .featured(true)
+                .orderBy('postDate desc')
+        } only %}
+    {% endif %}
+
+    {# show paginated non-featured articles #}
+    {% include '_partials/entries-list.twig' with {
+        layout: 'columns',
+        paginate: true,
+        paginationLimit: craft.app.config.custom.paginationLimit ?? 12,
+        query: craft.entries
+            .section('article')
+            .featured(false)
+            .orderBy('postDate desc')
+    } only %}
+</div>

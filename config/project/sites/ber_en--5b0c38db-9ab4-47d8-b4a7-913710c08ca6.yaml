@@ -1,0 +1,9 @@
+baseUrl: '@web/berlin/en'
+enabled: '1'
+handle: ber_en
+hasUrls: true
+language: en-US
+name: 'Berlin English'
+primary: false
+siteGroup: 3bb09a1c-cb36-438e-b8d5-0b35b0965f4e # Berlin
+sortOrder: 1

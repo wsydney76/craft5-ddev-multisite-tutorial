@@ -1,0 +1,57 @@
+{# CP template ui element. Show incoming relationships #}
+
+<div>
+    {# The relatedTo condition needs to updated on content model changes! #}
+    {% set entries = craft.entries
+        .relatedTo([
+            'or',
+            {targetElement: element},
+            {targetElement: element, field: 'bodyContent.image'},
+            {targetElement: element, field: 'bodyContent.location'},
+        ])
+        .status(null)
+        .drafts(null)
+        .provisionalDrafts(null)
+        .site('*')
+        .unique()
+        .preferSites([element.site.handle])
+    .collect %}
+
+    <h2>{{ 'Incoming {count,plural,=1{Relationship} other{Relationships}}'|t({count: entries.count}) }}</h2>
+
+    {% if entries.count %}
+        <table class="table data fullwidth">
+            <thead>
+            <tr>
+                <th>{{ 'Title'|t('app') }}</th>
+                <th>{{ 'Section'|t('app') }}</th>
+                <th>{{ 'Draft'|t('app') }}?</th>
+            </tr>
+            </thead>
+            {% for entry in entries %}
+                <tr>
+                    <td>
+                        <span class="status {{ entry.status }}"></span>
+                        <a href="{{ entry.cpEditUrl }}">{{ entry.title }}</a>
+                    </td>
+                    <td>
+                        {{ entry.section.name|t }}
+                    </td>
+                    <td>
+                        {% if entry.isProvisionalDraft %}
+                            {{ 'Provisional Draft'|t }}
+                        {% elseif entry.isDraft %}
+                            {{ 'Draft'|t('app') }}
+                        {% endif %}
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>
+            {{ 'Nothing found.'|t }}
+        </p>
+    {% endif %}
+
+</div>

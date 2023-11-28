@@ -1,0 +1,32 @@
+{# Cardlet embed component #}
+
+{% from '_macros/lib.twig' import img %}
+
+{# Classes applied to the link box #}
+{% set linkClasses = linkClasses ?? '' %}
+
+{# Classes applied to the title #}
+{% set titleClasses = titleClasses ?? 'text-2xl' %}
+
+{# The transform for the image #}
+{% set transform = transform ?? {width: 180, height: 120} %}
+
+<a class="flex transition-colors hover:bg-brand-200 dark:hover:bg-brand-700 {{ linkClasses }}" href="{{ url }}">
+
+    {% if image %}
+        {# Using pe instead of pr here, so that it works also for rtl languages #}
+        <div class="pe-4 shrink-0">
+            {{ img(image, {transform: transform})|attr({class: 'object-cover h-full'}) }}
+        </div>
+    {% endif %}
+    <div class="pe-4 space-y-2">
+        {% block title %}
+            <div class="{{ titleClasses }}">
+                {{ title }}
+            </div>
+        {% endblock %}
+
+        {% block content %}{% endblock %}
+    </div>
+  
+</a>

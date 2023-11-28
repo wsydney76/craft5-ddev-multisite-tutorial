@@ -1,0 +1,26 @@
+{% extends "_layouts/main.twig" %}
+
+{% do _globals.set('featuredImage', entry.featuredImageBySite.one) %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    {% if entry.homeText %}
+        <div class="mb-8">
+            {{ entry.homeText|md|purify }}
+        </div>
+    {% endif %}
+
+    {% cache %}
+        {# <div>
+            Cached: {{ now|datetime }}
+        </div> #}
+
+        {# 1. show featured articles firs #}
+        {% include '_sections/home/featured.twig' with {} only %}
+
+        {# 2. then the rest #}
+        {% include '_sections/home/latest.twig' with {} only %}
+
+    {% endcache %}
+{% endblock %}

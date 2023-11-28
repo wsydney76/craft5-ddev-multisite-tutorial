@@ -1,0 +1,15 @@
+{# Show site icon and text #}
+<div class="flex items-center">
+    {% set image = siteInfo.icon.one %}
+    {% if image %}
+        <a class="shrink-0" title="{{ 'Start'|t }}" href="{{ url('/') }}">
+            {# has to be a squre icon #}
+            {{ svg(image)|attr({class: 'w-12 h-12 pe-4'}) }}
+        </a>
+    {% endif %}
+
+    <a class="text-3xl font-semibold" href="{{ siteUrl('/') }}">
+        {# Add the site group name if not on the default site #}
+        {{ siteInfo.siteName ?: systemName }} {{ currentSite.group.name != 'Default' ? "- #{currentSite.group.name|t}" : '' }}
+    </a>
+</div>

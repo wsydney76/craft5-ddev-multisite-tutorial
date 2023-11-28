@@ -1,0 +1,77 @@
+{% apply spaceless %}
+
+    {#
+    Set variables for layout, so that
+        * we enable pages that are not backed by an entry
+        * let templates overwrite default entry values
+        
+        Using _globals, although just setting simple variables would have also worked
+        but we like the idea that _globals makes variable scope easier to understand/debug.
+    #}
+
+    {# let templates overwrite title #}
+    {% set title = _globals.get('title') ?? entry.title ?? 'Untitled'|t %}
+
+    {# let templates overwrite featured image, use global images by default #}
+    {% set featuredImage = _globals.get('featuredImage') ?? entry.featuredImage.one ?? null %}
+
+    {% set mainWidth = _globals.get('mainWidth') ?? 'md' %}
+    {% set widthClasses = {
+        md: 'max-w-screen-md mx-auto',
+        lg: 'max-w-screen-lg mx-auto'
+    } %}
+
+{% endapply -%}
+<!DOCTYPE html>
+<html lang="{{ craft.app.language[:2] }}" style="overflow-y: scroll">
+
+{% include '_layouts/partials/head.twig' with {title} only %}
+
+{# Handle dark mode and rtl languages #}
+<body class="bg-brand-50 px-8 text-brand-800 dark:bg-brand-900 dark:text-brand-100"
+      dir="{{ craft.app.locale.orientation }}">
+
+{# Skip to content link for screen readers #}
+<a class="sr-only text-xl focus:not-sr-only" href="#content">{{ 'Skip to content'|t }}</a>
+
+{# make the header a bit wider #}
+<header class="max-w-screen-lg mx-auto pt-8 pb-12">
+
+    {% include '_layouts/partials/topbar.twig' with {entry} only %}
+
+    {# Handle featured image here for consistency across sections #}
+    {% block featured %}
+        {% if featuredImage is not defined and entry is defined and entry.featuredImage %}
+            {% set featuredImage = entry.featuredImage.one %}
+        {% endif %}
+
+        {% if featuredImage is defined %}
+            {% include '_partials/featured-image.twig' with {featuredImage} %}
+        {% endif %}
+    {% endblock %}
+
+</header>
+
+{# Let section template set the required page width #}
+<main id="content" class="{{ widthClasses[mainWidth] }}">
+
+    {# Let templates overwrite the complete title block or just the title text #}
+    {% block title %}
+        <h1 class="mb-8 text-4xl font-semibold">{% block titleText %}{{ title }}{% endblock %}</h1>
+    {% endblock %}
+
+    {# Templates overwriting this block can pull the default content in with parent() #}
+    {% block content %}
+        {% if entry is defined and entry.bodyContent %}
+            {% include '_partials/blocks.twig' with {
+                query: entry.bodyContent
+            } only %}
+        {% endif %}
+    {% endblock %}
+
+</main>
+
+{% include '_layouts/partials/footer.twig' with {entry} only %}
+
+</body>
+</html>

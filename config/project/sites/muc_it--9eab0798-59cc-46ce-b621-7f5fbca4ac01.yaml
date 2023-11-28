@@ -1,0 +1,9 @@
+baseUrl: '@web/monaco/it'
+enabled: '1'
+handle: muc_it
+hasUrls: true
+language: it-IT
+name: 'Monaco Italiano'
+primary: false
+siteGroup: 1a974179-ff63-42af-9f2f-b2c34cbfefe2 # Munich
+sortOrder: 9

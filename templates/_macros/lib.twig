@@ -1,0 +1,23 @@
+{# Simplified image output #}
+{% macro img(image, config = []) %}
+
+    {# Default transform/srcset #}
+    {% set transform = config.transform ?? {width: 1024} %}
+    {% set srcset = config.srcset ?? [1024, 640, 400] %}
+
+    {# Lazy load by default, this should be overwritten for images at the top of a page #}
+    {% set attr = config.attr ?? {loading: 'lazy'} %}
+
+    {# Set default format #}
+    {% if transform.format is not defined %}
+        {% set transform = transform|merge({format: 'webp'}) %}
+    {% endif %}
+
+
+    {# Add alt attribute, as Crafts built-in alt field is not translatable #}
+    {% set attr = attr | merge({alt: image.altText ?: image.title}) %}
+
+    {# Finally... #}
+    {{ image.img(transform, srcset)|attr(attr) }}
+
+{% endmacro %}

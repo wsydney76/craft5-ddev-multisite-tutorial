@@ -1,0 +1,128 @@
+{# The default page. That is what will popup if no site is present in the url #}
+
+{% from '_macros/lib.twig' import img %}
+{% extends "_layouts/main.twig" %}
+
+{# Require wide page width #}
+{% do _globals.set('mainWidth', 'lg') %}
+
+{% set groups = craft.app.sites.allGroups %}
+
+{# Site groups cannot be sorted in Craft, so we have to factor in a custom sort order #}
+
+{% set sortedGroups = [] %}
+{% for sortedSiteName in craft.app.config.custom.sortedSiteGroups %}
+    {% set sortedGroups = sortedGroups
+        |push(
+        groups|filter(
+            group => group.name == sortedSiteName
+        )
+        |first) %}
+{% endfor %}
+
+
+{# Replace the default featured image with a collection of images from sites #}
+{% block featured %}
+    {% set homePage = craft.entries.section('home').site('*').unique().one %}
+
+    {# Use the secondary image that is set to 'manage relationships on a site bases' #}
+    {% set siteIds = craft.app.sites.allSites | map(site => site.id) %}
+    {% set images = craft.assets
+        .relatedTo({sourceElement: homePage, field: 'secondaryImage', sourceSite: siteIds})
+        .limit(4)
+    .collect %}
+
+    {# Show images side by side #}
+    <div class="flex">
+        {% for image in images %}
+            <div class="saturate-50">
+                {{ img(image, {
+                    transform: {width: 300, height: 150, format: 'webp'},
+                    attr: {
+                        loading: null,
+                        fetchpriority: 'high'
+                    }
+                }) }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    {% if entry.homeText %}
+        <div class="mb-8">
+            {{ entry.homeText|md|purify }}
+        </div>
+    {% endif %}
+
+    {# show a card for each site group in a grid #}
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+
+        {% for group in sortedGroups %}
+
+            {# Get all sites in the group #}
+            {% set sitesInGroup = craft.app.sites.sitesByGroupId(group.id) %}
+
+            {# Get the first site. We will get the featured image from its homepage. #}
+            {% set firstSite = sitesInGroup | first %}
+
+            <div class="border border-brand-400 bg-white shadow-md">
+                {# get the home page for first site in group #}
+                {% set homePage = craft.entries.section('home').site(firstSite).one %}
+
+                {# Play it safe #}
+                {% if homePage %}
+                    {# The featured image, link it to the homepage #}
+                    {% set image = homePage.featuredImageBySite.one ?? null %}
+                    {% if image %}
+                        <a href="{{ firstSite.baseUrl }}" title="{{ firstSite.name }}">
+                            {{ img(image, {
+                                transform: {width: 1024, height:450}
+                            }) }}
+                        </a>
+                    {% endif %}
+
+                    <div class="p-4">
+                        {# Translated site group name #}
+                        <h2 class="text-2xl font-semibold dark:text-brand-200">{{ group.name|t }}</h2>
+
+                        {# Display all languages, link it to the sites base url (the homepage) #}
+                        <div class="mt-2 space-x-2">
+                            {% for site in sitesInGroup %}
+                                <a href="{{ site.baseUrl }}">{{ (site.locale.displayName|split('(')[0]|capitalize) }}</a>
+                            {% endfor %}
+                        </div>
+
+                        {# show 2 latest articles for the first site of the site group #}
+                        <div class="mt-4">
+                            {% set latestArticles = craft.entries
+                                .section('article')
+                                .site(firstSite)
+                                .limit(2)
+                            .all %}
+
+                            {# Translate with the first sites language, so that header and article titles match #}
+                            <p class="font-semibold">
+                                {{ '{count,plural,=1{Latest article} other{Latest articles}}'
+                                |t(params={count: latestArticles|length}, language=firstSite.language) }}:
+                            </p>
+
+                            {# Link to articles #}
+                            <ul class="mt-2 space-y-1 list-disc pl-5">
+                                {% for article in latestArticles %}
+                                    <li>
+                                        {# show only 1 line #}
+                                        <a href="{{ article.url }}" class="line-clamp-1">{{ article.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}

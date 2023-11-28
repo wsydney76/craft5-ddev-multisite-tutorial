@@ -1,0 +1,9 @@
+baseUrl: '@web/soltau/de'
+enabled: '1'
+handle: sol_de
+hasUrls: true
+language: de-DE
+name: 'Soltau Deutsch'
+primary: false
+siteGroup: 574daf56-8e00-42e1-9bcb-23461245101f # Soltau
+sortOrder: 5

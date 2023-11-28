@@ -1,0 +1,70 @@
+{# Output list item
+    Searching for a better name, a list item is just a thing (an event, kind of) with
+    - a heading
+    - a text
+    - a link to a location
+    - date and time of the event, opening hours whatever
+    - an external link
+
+    People love lists (really, do they?), so an article is often composed of a number of list items.
+#}
+
+{# Using globals to set consecutive number for list items
+    This way we can avoid adding logic to the blocks template
+#}
+
+{% set number = _globals.get('listitem_number') ?? 1 %}
+{% do _globals.set('listitem_number', number + 1) %}
+
+{# In context=location some things are meaningless/redundant  #}
+{% set context = context ?? 'article' %}
+
+<div class="my-16 space-y-4 rtl:space-x-reverse">
+    <div class="flex items-center space-x-4 text-2xl font-semibold rtl:space-x-reverse">
+        {% if context == 'article' %}
+            {# a number in fancy style #}
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-500 text-white">
+                {{ number }}
+            </div>
+        {% endif %}
+        <div>{{ block.heading }}</div>
+    </div>
+
+    {# Output text as markdown, filter out malicious code #}
+    <div>
+        {{ block.text|md|purify }}
+    </div>
+
+    {# Don't show location info if we are already on  #}
+    {% if context == 'article' %}
+        {% set location = block.location.one %}
+
+        {% if location %}
+            {# a bit more space between #}
+            <div class="space-x-4 rtl:space-x-reverse">
+                <span>{{ location.link }}</span> <span>{{ location.address }}</span>
+            </div>
+        {% endif %}
+    {% endif %}
+
+    {# Using a text field for now, which causes some redundancy.
+        Setting up a proper content model for this would need nested matrix...
+    #}
+    {% if block.dateAndTime %}
+        <div>
+            {{ block.dateAndTime }}
+        </div>
+    {% endif %}
+
+    {% if block.externalLink %}
+        {# Giving a bit more space, overwriting margins set by space-y #}
+        <div class="!mt-12">
+            {# Use an include for button like like in order to avoid repeating classes over and over  #}
+            {% include '_layouts/partials/button.twig' with {
+                href: block.externalLink,
+                caption: 'More info'|t
+            } only %}
+        </div>
+    {% endif %}
+
+</div>

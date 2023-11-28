@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: defaultHome
+name: 'Default Home'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  1181b464-1dd8-415e-86a1-422a8df582d0: # Default Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/default
+    uriFormat: __home__
+type: single

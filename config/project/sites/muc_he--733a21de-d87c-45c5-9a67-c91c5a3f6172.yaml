@@ -1,0 +1,9 @@
+baseUrl: '@web/munich/he'
+enabled: '1'
+handle: muc_he
+hasUrls: true
+language: he-IL
+name: 'Munich Hebrew'
+primary: false
+siteGroup: 1a974179-ff63-42af-9f2f-b2c34cbfefe2 # Munich
+sortOrder: 10

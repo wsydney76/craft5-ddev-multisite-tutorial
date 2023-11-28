@@ -1,0 +1,6 @@
+{# Show all featured articles in default cardlet width #}
+{% include '_partials/entries-list.twig' with {
+    query: craft.entries
+        .section('article')
+        .featured(true)
+} only %}

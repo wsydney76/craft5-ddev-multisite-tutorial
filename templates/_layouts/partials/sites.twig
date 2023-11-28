@@ -1,0 +1,37 @@
+{% cache using key "sites_#{currentSite.handle}" %}
+
+    {# Site groups cannot be sorted in Craft, so we have to factor in a custom sort order #}
+    {% set groups = craft.app.sites.allGroups %}
+
+    {% set sortedGroups = [] %}
+    {% for sortedSiteName in craft.app.config.custom.sortedSiteGroups %}
+        {% set sortedGroups = sortedGroups
+            |push(
+            groups|filter(
+                group => group.name == sortedSiteName
+            )
+            |first) %}
+    {% endfor %}
+
+
+    {% for group in sortedGroups %}
+        {# Show a link to just one site in a site group #}
+
+        {# Get all sites in group #}
+        {% set sites = craft.app.sites.sitesByGroupId(group.id) %}
+
+        {# filter out the site with the current language #}
+        {% set selectedSite = sites|filter(site => site.language == currentSite.language) %}
+        {% if not selectedSite %}
+            {# if not available, use the first site #}
+            {% set selectedSite = [sites[0]] %}
+        {% endif %}
+
+        {# Highlight the current site group #}
+        <a class="{{ currentSite.group.name == group.name ? 'font-semibold' }}" href="{{ selectedSite|first.baseUrl }}">
+            {# We have to translate the group name, as Craft does not have translatable site group names #}
+            {# e.g. Munich | München | Monaco #}
+            {{ group.name|t }}
+        </a>
+    {% endfor %}
+{% endcache %}

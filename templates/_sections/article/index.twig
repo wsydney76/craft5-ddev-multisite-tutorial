@@ -1,0 +1,66 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+
+    {# Compose the article page with components #}
+
+
+    {# 1. Some meta data #}
+    {% embed '_layouts/partials/box.twig' %}
+        {% block content %}
+            {{ 'Published'|t }} {{ entry.postDate|datetime('short') }} {{ 'by'|t }} {{ entry.author.name }}
+        {% endblock %}
+    {% endembed %}
+
+    {# 2. The default content (the bodyContent) #}
+    {{ parent() }}
+
+    {# 3. Topics #}
+    {% include '_partials/entries-list.twig' with {
+        heading: '{count,plural,=1{Topic} other{Topics}}',
+        layout: 'small',
+        query: entry.topics
+    } only %}
+
+
+    {# 4. Related entries
+
+        - Show relationship from both directions
+        - There can be relationship to entries from other sites
+    #}
+
+    {# Prefer entries from current site #}
+    {% set preferredSites = [currentSite] %}
+
+    {# Then prefer other sites with the same language #}
+    {% set preferredSites = preferredSites | merge(craft.app.sites.allSites
+        | filter(site => (site.language == currentSite.language and site.id != currentSite.id))) %}
+
+    {# get only the handle #}
+    {% set preferredSites = preferredSites| map(site => site.handle) %}
+
+    {# This query
+        - gets related entries from both directions by using 'element:' instead of 'targetElement' or 'sourceElement'
+        - gets entries from all sites 'site('*')
+        - gets only one localized version 'unique()'
+        - gets that from the first of the list in preferred sites
+    #}
+
+    {% include '_partials/entries-list.twig' with {
+        heading: '{count,plural,=1{Related entry} other{Related entries}}',
+        layout: 'small',
+        query: craft.entries
+            .relatedTo({element: entry, field: 'relatedEntries'})
+            .site('*')
+            .unique()
+            .preferSites(preferredSites)
+            .orderBy('postDate desc')
+    } only %}
+
+    {# Link to previous/next article #}
+    {% include '_partials/prevnext.twig' with {
+        entry,
+        condition: {section: 'article'}
+    } only %}
+
+{% endblock %}

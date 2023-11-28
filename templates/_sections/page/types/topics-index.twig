@@ -1,0 +1,8 @@
+{# Output topics #}
+
+{% include '_partials/entries-list.twig' with {
+    layout: 'columns',
+    paginate: true,
+    query: craft.entries
+        .section('topic')
+} only %}

@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'Munich' => 'Monaco',
+    'munich' => 'monaco',
+    'Latest Posts' => 'Ultimi messaggi',
+    'More info' => 'Ulteriori informazioni',
+    'Posts' => 'Contributi',
+    'Published' => 'Pubblicato',
+    'Search for:' => 'Ricerca di:',
+    'Search in all sites' => 'Ricerca in tutti i siti',
+    'Skip to content' => 'Vai al contenuto',
+    'Start' => 'Cerca',
+    'Topics' => 'Temi',
+    'Your search for "{q}" didn’t return any results.' => 'La ricerca di "{q}" non ha prodotto alcun risultato.',
+    'by' => 'da',
+    '{count,plural,=1{search result} other{search results}}' => '{count,plural,=1{Risultato della ricerca} other{Risultati della ricerca}}',
+    '{count,plural,=1{Topic} other{Topics}}' => '{count,plural,=1{Tema} other{Temi}}',
+    '{count,plural,=1{post} other{posts}}' => '{count,plural,=1{articolo} other{Articoli}}',
+    '{count,plural,=1{Related entry} other{Related entries}}' => '{count,plural,=1{Articolo correlata} other{Articoli correlate}}',
+    'Next Page' => 'Pagina successiva',
+    'Previous Page' => 'Pagina precedente',
+    '“' => '„',
+    '”' => '“',
+];

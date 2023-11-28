@@ -1,0 +1,16 @@
+{# The footer component.
+    This would be the place to add required legal stuff, like imprint/pricacy stuff.
+#}
+<footer class="mt-8">
+    <div class="flex justify-between max-w-screen-lg mx-auto  border-t border-brand-400 py-8">
+        <div>
+            &copy; {{ siteInfo.copyright }} {{ now|date('Y') }}
+        </div>
+        <div class="text-right">
+            {% if entry is defined %}
+                <a href="{{ entry.cpEditUrl }}" target="_blank">Edit</a>
+            {% endif %}
+        </div>
+    </div>
+</footer>
+

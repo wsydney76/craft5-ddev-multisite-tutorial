@@ -1,0 +1,82 @@
+fieldLayouts:
+  b610ba0f-3699-420d-a62a-49b631e09bc2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 79ecaac4-4f29-445b-ba4f-12004802eb33
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3e35a043-a62e-4ede-acd6-44dfb92d6914 # Site Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b7b855c-3f2f-4d39-8ef0-e5fccd7a2685
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8fc13168-aa9d-4e4b-9754-de59335df6b3 # Icon
+            instructions: 'Upload a square svg'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87293d53-6604-4895-bec2-21d8ef2eafef
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: eb6b24cc-83d7-416f-be4b-d002c7688b58 # Copyright
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5b5269f-b571-4e25-af4c-6cdfdc2fbf56
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bc563acf-2bf0-4e70-ad0b-0d9aff9906c7
+        userCondition: null
+handle: siteInfo
+hasTitleField: false
+name: 'Site Info - Global Settings'
+section: 9e8a3f1b-ec7c-4c9a-9971-b65428c62592 # Site Info - Global Settings
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
