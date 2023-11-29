@@ -9,8 +9,8 @@ return [
     // Localized names are handled by translations
     // This must match the site group names in Craft, otherwise errors will occur
     'sortedSiteGroups' => [
-        'Berlin',
         'Munich',
+        'Berlin',
         'Hamburg',
         'Soltau'
     ]

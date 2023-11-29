@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b42d2b7f7c112175958c3372caf9505",
+    "content-hash": "976a49f8b38598e43b549b75a42b3af2",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1282,63 +1282,6 @@
             "time": "2022-12-14T08:49:07+00:00"
         },
         {
-            "name": "doublesecretagency/craft-cpcss",
-            "version": "2.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doublesecretagency/craft-cpcss.git",
-                "reference": "d9f3a9f1f2fc30b78a64dfbab13c9ebc4fe9d801"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doublesecretagency/craft-cpcss/zipball/d9f3a9f1f2fc30b78a64dfbab13c9ebc4fe9d801",
-                "reference": "d9f3a9f1f2fc30b78a64dfbab13c9ebc4fe9d801",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0",
-                "nystudio107/craft-code-editor": "^1.0.7"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Control Panel CSS",
-                "handle": "cp-css",
-                "schemaVersion": "2.0.0",
-                "changelogUrl": "https://raw.githubusercontent.com/doublesecretagency/craft-cpcss/v2/CHANGELOG.md",
-                "class": "doublesecretagency\\cpcss\\CpCss"
-            },
-            "autoload": {
-                "psr-4": {
-                    "doublesecretagency\\cpcss\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Double Secret Agency",
-                    "homepage": "https://www.doublesecretagency.com/plugins"
-                }
-            ],
-            "description": "Add custom CSS to your Control Panel.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "cp-css",
-                "craft-plugin",
-                "craftcms",
-                "css"
-            ],
-            "support": {
-                "docs": "https://github.com/doublesecretagency/craft-cpcss/blob/v2/README.md",
-                "issues": "https://github.com/doublesecretagency/craft-cpcss/issues",
-                "source": "https://github.com/doublesecretagency/craft-cpcss/tree/2.6.0"
-            },
-            "time": "2022-12-16T05:29:18+00:00"
-        },
-        {
             "name": "egulias/email-validator",
             "version": "3.2.6",
             "source": {
@@ -2444,71 +2387,6 @@
             "time": "2023-10-27T15:25:26+00:00"
         },
         {
-            "name": "nystudio107/craft-code-editor",
-            "version": "1.0.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nystudio107/craft-code-editor.git",
-                "reference": "66a1ba02c0ad5de8e89d4632d5e4da1dfa193dce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-code-editor/zipball/66a1ba02c0ad5de8e89d4632d5e4da1dfa193dce",
-                "reference": "66a1ba02c0ad5de8e89d4632d5e4da1dfa193dce",
-                "shasum": ""
-            },
-            "require": {
-                "phpdocumentor/reflection-docblock": "^5.0.0"
-            },
-            "require-dev": {
-                "craftcms/cms": "^3.0.0 || ^4.0.0"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "bootstrap": "nystudio107\\codeeditor\\CodeEditor"
-            },
-            "autoload": {
-                "psr-4": {
-                    "nystudio107\\codeeditor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "nystudio107",
-                    "homepage": "https://nystudio107.com"
-                }
-            ],
-            "description": "Provides a code editor field with Twig & Craft API autocomplete",
-            "keywords": [
-                "Craft",
-                "Monaco",
-                "cms",
-                "code",
-                "craftcms",
-                "css",
-                "editor",
-                "javascript",
-                "markdown",
-                "twig"
-            ],
-            "support": {
-                "docs": "https://github.com/nystudio107/craft-code-editor/blob/v1/README.md",
-                "issues": "https://github.com/nystudio107/craft-code-editor/issues",
-                "source": "https://github.com/nystudio107/craft-code-editor"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/khalwat",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-08-16T02:31:19+00:00"
-        },
-        {
             "name": "nystudio107/craft-plugin-vite",
             "version": "4.0.8",
             "source": {
@@ -2915,16 +2793,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.3",
+            "version": "1.24.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "12f01d214f1c73b9c91fdb3b1c415e4c70652083"
+                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/12f01d214f1c73b9c91fdb3b1c415e4c70652083",
-                "reference": "12f01d214f1c73b9c91fdb3b1c415e4c70652083",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6bd0c26f3786cd9b7c359675cb789e35a8e07496",
+                "reference": "6bd0c26f3786cd9b7c359675cb789e35a8e07496",
                 "shasum": ""
             },
             "require": {
@@ -2956,9 +2834,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.3"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.24.4"
             },
-            "time": "2023-11-18T20:15:32+00:00"
+            "time": "2023-11-26T18:29:22+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
