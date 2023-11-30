@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1701261412
+dateModified: 1701353523
 elementSources:
   craft\elements\Asset:
     -
@@ -303,6 +303,7 @@ meta:
     ba328fdf-594b-42f5-b083-3b55765dd8ef: Heading # Heading
     bd76fb6e-8765-41d3-8e8a-02e37e127c80: Common # Common
     be7b43ab-37cd-4a4c-be64-68f6a0a15eb0: Text # Text
+    c7a4af96-920c-42c0-b6d8-202ab522bdab: Image # Image
     c780bb7a-337c-46ba-95c4-c0dcbfcb457d: Home # Home
     cc3fbab0-826f-4aed-b2aa-eeaecc2964bf: 'Alt Text' # Alt Text
     cc5167a2-3fc7-4600-bcef-c928500a7155: 'Hamburg Deutsch' # Hamburg Deutsch

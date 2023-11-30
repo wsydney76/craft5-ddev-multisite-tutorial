@@ -13,13 +13,27 @@
     This way we can avoid adding logic to the blocks template
 #}
 
+{% from '_macros/lib.twig' import img %}
+
 {% set number = _globals.get('listitem_number') ?? 1 %}
 {% do _globals.set('listitem_number', number + 1) %}
 
 {# In context=location some things are meaningless/redundant  #}
 {% set context = context ?? 'article' %}
 
+{% set location = block.location.one %}
+
 <div class="my-16 space-y-4 rtl:space-x-reverse">
+    {% if context == 'article' %}
+        {# Show image from block with the locations featured image as fallback #}
+        {% set image = block.image.one ?? location.featuredImage.one %}
+        {% if image %}
+            {{ img(image, {
+                transform: {width: 800, height: 300}
+            }) }}
+        {% endif %}
+    {% endif %}
+
     <div class="flex items-center space-x-4 text-2xl font-semibold rtl:space-x-reverse">
         {% if context == 'article' %}
             {# a number in fancy style #}
@@ -37,8 +51,6 @@
 
     {# Don't show location info if we are already on  #}
     {% if context == 'article' %}
-        {% set location = block.location.one %}
-
         {% if location %}
             {# a bit more space between #}
             <div class="space-x-4 rtl:space-x-reverse">

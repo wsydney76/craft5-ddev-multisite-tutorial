@@ -19,6 +19,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: c7a4af96-920c-42c0-b6d8-202ab522bdab # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3b3d7b8-077b-4b55-acbe-cf00e41d6e00
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: cee9ebb3-ce52-4a35-9a98-0ff3c43853a7 # Text
             instructions: null
             label: null
@@ -160,6 +172,76 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+  c7a4af96-920c-42c0-b6d8-202ab522bdab: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+          -
+            - conditionRules
+            -
+              -
+                __assoc__:
+                  -
+                    - class
+                    - craft\elements\conditions\assets\WidthConditionRule
+                  -
+                    - uid
+                    - 3b1a6395-84d1-4663-bde7-1793af4589ea
+                  -
+                    - operator
+                    - '>='
+                  -
+                    - value
+                    - '800'
+                  -
+                    - maxValue
+                    - ''
+      selectionLabel: 'Select an image'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   cee9ebb3-ce52-4a35-9a98-0ff3c43853a7: # Text
     columnSuffix: mexnfybm
     contentColumnType: text
