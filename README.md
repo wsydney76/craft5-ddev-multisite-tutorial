@@ -72,6 +72,7 @@ Here is a high level overview of how the spec would have looked like, see commen
 * A 'Related entries' field for articles to link to other articles across all sites.
 * Location pages show related articles with their corresponding 'List item' blocks.
 * A search page with the option to search across all sites or just the current site.
+* Support dark mode.
 
 ## Internals
 

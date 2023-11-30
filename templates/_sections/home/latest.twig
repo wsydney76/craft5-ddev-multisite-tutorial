@@ -12,7 +12,7 @@
     query: query
 } only %}
 
-{# Link to article index if there are more then 2 articles #}
+{# Link to article index if there are more than 2 articles #}
 {% set more = query.count - limit %}
 {% if more >= 1 %}
     {% set indexEntry = craft.entries.section('page').type('articlesIndex').one %}
