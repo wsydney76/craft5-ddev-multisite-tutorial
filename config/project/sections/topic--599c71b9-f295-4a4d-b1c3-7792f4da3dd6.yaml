@@ -18,7 +18,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _sections/topic
-    uriFormat: 'topics/{slug}'
+    uriFormat: 'トピックス/{slug}'
   74bdc2b4-7971-4bf7-ae69-c90f54f03c60: # Soltau Deutsch
     enabledByDefault: true
     hasUrls: true
