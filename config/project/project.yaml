@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1701353523
+dateModified: 1701603923
 elementSources:
   craft\elements\Asset:
     -
@@ -270,6 +270,7 @@ meta:
     9eab0798-59cc-46ce-b621-7f5fbca4ac01: 'Monaco Italiano' # Monaco Italiano
     30cfb989-f158-4630-9bde-19f468e9519c: 'Wide Content' # Wide Content
     033dce53-e320-4834-8bd9-1e93b951e37f: 'Topics Index' # Topics Index
+    34c4b5cc-4b07-4d8f-a7fb-c6fbdb96df58: 'Berlin Japanese' # Berlin Japanese
     74bdc2b4-7971-4bf7-ae69-c90f54f03c60: 'Soltau Deutsch' # Soltau Deutsch
     81e6a0d6-13c5-47ad-a9e6-c2181276db9c: Text # Text
     84b98802-2548-4aed-b67e-fc97f6ed9e30: Page # Page

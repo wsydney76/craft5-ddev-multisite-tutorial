@@ -14,6 +14,6 @@ settings:
   multiline: false
   placeholder: null
   uiMode: normal
-translationKeyFormat: '{{ object.site.handle ends with ''he'' ? ''he'' : ''latin'' }}'
+translationKeyFormat: '{{ object.site.handle|split(''_'')[1] in [''he'', ''ja''] ? object.site.handle|split(''_'')[1] : ''latin'' }}'
 translationMethod: custom
 type: craft\fields\PlainText

@@ -14,6 +14,11 @@ siteSettings:
     hasUrls: true
     template: _sections/home
     uriFormat: __home__
+  34c4b5cc-4b07-4d8f-a7fb-c6fbdb96df58: # Berlin Japanese
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/home
+    uriFormat: __home__
   74bdc2b4-7971-4bf7-ae69-c90f54f03c60: # Soltau Deutsch
     enabledByDefault: true
     hasUrls: true
