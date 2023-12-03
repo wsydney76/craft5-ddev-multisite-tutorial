@@ -1,16 +1,18 @@
-{# Get localized versions of the current entry #}
-{% set localizedEntries = entry.localized.indexBy('siteId').collect %}
+{# Get localized versions of the current entry, indexed by siteId #}
+{% set localizedEntries = _globals.get('localizedEntries') %}
 
 {# Sites within a group can be sorted #}
-{% for site in craft.app.sites.sitesByGroupId(entry.site.groupId) %}
-    {% if site.id == entry.site.id %}
-        {# currentSite: just show the highlighted name #}
-        <span class="font-semibold">{{ _self.getLang(entry) }}</span>
-    {% elseif localizedEntries[site.id] is defined %}
-        {# link to localized version #}
-        <a href="{{ localizedEntries[site.id].url }}">{{ _self.getLang(localizedEntries[site.id]) }}</a>
-    {% endif %}
-{% endfor %}
+{% if localizedEntries %}
+    {% for site in craft.app.sites.sitesByGroupId(entry.site.groupId) %}
+        {% if site.id == entry.site.id %}
+            {# currentSite: just show the highlighted name #}
+            <span class="font-semibold">{{ _self.getLang(entry) }}</span>
+        {% elseif localizedEntries[site.id] is defined %}
+            {# link to localized version #}
+            <a href="{{ localizedEntries[site.id].url }}">{{ _self.getLang(localizedEntries[site.id]) }}</a>
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
 {# Get the language name from locale #}
 {% macro getLang(entry) %}

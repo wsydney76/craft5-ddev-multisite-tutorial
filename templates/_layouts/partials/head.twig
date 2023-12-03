@@ -4,5 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ title }} | {{ siteInfo.siteName ?: systemName }}</title>
     <meta name="description" content="Dummy, pleasing lighthouse...">
+    <link rel="canonical" href="{{ _globals.get('canonicalUrl') }}">
+    <link rel="alternate" hreflang="{{ currentSite.language }}" href="{{ _globals.get('canonicalUrl') }}">
+    {% for localizedEntry in _globals.get('localizedEntries') %}
+        <link rel="alternate" hreflang="{{ localizedEntry.site.language }}" href="{{ localizedEntry.url }}">
+    {% endfor %}
     {{ craft.vite.script("/resources/js/app.js", false) }}
 </head>

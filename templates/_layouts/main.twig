@@ -15,6 +15,14 @@
     {# let templates overwrite featured image #}
     {% set featuredImage = _globals.get('featuredImage') ?? entry.featuredImage.one ?? null %}
 
+    {# Set canonicalUrl, so that it works for entries and other pages #}
+    {% do _globals.set('canonicalUrl', entry.url ?? (alias('@web') ~ craft.app.request.url)) %}
+
+    {# set localizedEntries #}
+    {% if entry is defined %}
+        {% do _globals.set('localizedEntries', entry.localized.indexBy('siteId').collect) %}
+    {% endif %}
+
     {% set mainWidth = _globals.get('mainWidth') ?? 'md' %}
     {% set widthClasses = {
         md: 'max-w-screen-md mx-auto',

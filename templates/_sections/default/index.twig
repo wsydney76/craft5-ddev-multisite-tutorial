@@ -67,7 +67,7 @@
             {# Get the first site. We will get the featured image from its homepage. #}
             {% set firstSite = sitesInGroup | first %}
 
-            <div class="border border-brand-400 bg-white shadow-md">
+            <div class="border border-brand-400 bg-white shadow-md dark:bg-brand-800">
                 {# get the home page for first site in group #}
                 {% set homePage = craft.entries.section('home').site(firstSite).one %}
 
