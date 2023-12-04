@@ -3,6 +3,9 @@
 # Delete all but the most recent revision
 ddev craft utils/prune-revisions --max-revisions=1
 
+# Run garbage collection
+ddev craft gc --interactive=0
+
 # Rebuild project config
 ddev craft project-config/rebuild
 
