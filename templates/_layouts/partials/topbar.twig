@@ -3,7 +3,8 @@
 #}
 
 {# We need a larger gap here for the mobile in order to have sufficiently large tap regions #}
-<div class="pb-8 grid lg:grid-cols-5 gap-3 text-sm lg:gap2">
+{# Do not use a small font for languages with symbol fonts, such as Chinese. This would otherwise be illegible. #}
+<div class="pb-8 grid lg:grid-cols-5 gap-3 {{ not siteInfo.increaseFontSize ? 'text-sm' }} lg:gap2">
     <div class="lg:mb-0 lg:col-span-2">
         {% include '_layouts/partials/site.twig' with {} only %}
     </div>

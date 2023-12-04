@@ -21,3 +21,8 @@
     {{ image.img(transform, srcset)|attr(attr) }}
 
 {% endmacro %}
+
+{# Get the language name from sites language #}
+{% macro getLanguageBySite(site) %}
+    {{ craft.app.config.custom.languageNames[site.language] }}
+{% endmacro %}

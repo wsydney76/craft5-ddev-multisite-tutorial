@@ -4,6 +4,11 @@ handle: topic
 name: Topic
 propagationMethod: custom
 siteSettings:
+  1efc3da2-ad70-455b-8d5a-4f712d3e3482: # Berlin Türkçe
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/topic
+    uriFormat: 'konular/{slug}'
   5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Berlin English
     enabledByDefault: true
     hasUrls: true
@@ -44,6 +49,11 @@ siteSettings:
     hasUrls: true
     template: _sections/topic
     uriFormat: 'themen/{slug}'
+  a599f4be-6dfc-4e41-a635-772762da5abe: # Hamburg Chinese
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/topic
+    uriFormat: 'topics/{slug}'
   cc5167a2-3fc7-4600-bcef-c928500a7155: # Hamburg Deutsch
     enabledByDefault: true
     hasUrls: true

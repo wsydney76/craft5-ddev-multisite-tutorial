@@ -4,6 +4,11 @@ handle: home
 name: Home
 propagationMethod: all
 siteSettings:
+  1efc3da2-ad70-455b-8d5a-4f712d3e3482: # Berlin Türkçe
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/home
+    uriFormat: __home__
   5b0c38db-9ab4-47d8-b4a7-913710c08ca6: # Berlin English
     enabledByDefault: true
     hasUrls: true
@@ -40,6 +45,11 @@ siteSettings:
     template: _sections/home
     uriFormat: __home__
   65355561-253f-4578-abb7-0e27ed694878: # Berlin Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/home
+    uriFormat: __home__
+  a599f4be-6dfc-4e41-a635-772762da5abe: # Hamburg Chinese
     enabledByDefault: true
     hasUrls: true
     template: _sections/home

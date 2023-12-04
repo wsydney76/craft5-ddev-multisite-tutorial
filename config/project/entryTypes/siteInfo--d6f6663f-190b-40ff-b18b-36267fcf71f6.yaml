@@ -66,6 +66,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: d2620d92-1e9a-4bd4-b474-5a73547f43c9 # Increase Font Size
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c544e80e-5800-4486-82be-1c01d88af25f
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: bc563acf-2bf0-4e70-ad0b-0d9aff9906c7
         userCondition: null

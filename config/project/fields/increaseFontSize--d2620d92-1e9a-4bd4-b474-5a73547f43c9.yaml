@@ -1,0 +1,14 @@
+columnSuffix: mmhwiovg
+contentColumnType: boolean
+fieldGroup: 169ccd00-9c12-4921-b187-8ef8ca2ad525 # Assets
+handle: increaseFontSize
+instructions: 'Check if letters are not readable for the selected language'
+name: 'Increase Font Size'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\Lightswitch

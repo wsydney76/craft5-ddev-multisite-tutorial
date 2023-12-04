@@ -1,0 +1,9 @@
+baseUrl: '@web/hamburg/zh'
+enabled: '1'
+handle: ham_zh
+hasUrls: true
+language: zh-Hans-CN
+name: 'Hamburg Chinese'
+primary: false
+siteGroup: 6ef5e992-55f6-464f-b946-3eda031693df # Hamburg
+sortOrder: 11

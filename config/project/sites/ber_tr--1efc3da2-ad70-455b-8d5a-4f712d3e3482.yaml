@@ -1,9 +1,9 @@
-baseUrl: '@web/berlin/ja'
+baseUrl: '@web/berlin/tr'
 enabled: '1'
-handle: ber_ja
+handle: ber_tr
 hasUrls: true
-language: ja-JP
-name: 'Berlin Japanese'
+language: tr-TR
+name: 'Berlin Türkçe'
 primary: false
 siteGroup: 3bb09a1c-cb36-438e-b8d5-0b35b0965f4e # Berlin
-sortOrder: 4
+sortOrder: 3

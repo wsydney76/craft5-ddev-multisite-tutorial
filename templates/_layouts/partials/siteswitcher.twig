@@ -1,3 +1,5 @@
+{% from '_macros/lib.twig' import getLanguageBySite %}
+
 {# Get localized versions of the current entry, indexed by siteId #}
 {% set localizedEntries = _globals.get('localizedEntries') %}
 
@@ -6,16 +8,10 @@
     {% for site in craft.app.sites.sitesByGroupId(entry.site.groupId) %}
         {% if site.id == entry.site.id %}
             {# currentSite: just show the highlighted name #}
-            <span class="font-semibold">{{ _self.getLang(entry) }}</span>
+            <span class="font-semibold">{{ getLanguageBySite(entry.site) }}</span>
         {% elseif localizedEntries[site.id] is defined %}
             {# link to localized version #}
-            <a href="{{ localizedEntries[site.id].url }}">{{ _self.getLang(localizedEntries[site.id]) }}</a>
+            <a href="{{ localizedEntries[site.id].url }}">{{ getLanguageBySite(site) }}</a>
         {% endif %}
     {% endfor %}
 {% endif %}
-
-{# Get the language name from locale #}
-{% macro getLang(entry) %}
-    {# displayName is in the form 'language (country)' #}
-    {{ (entry.site.locale.displayName|split(' (')[0]|capitalize) }}
-{% endmacro %}
