@@ -4,6 +4,7 @@ namespace modules\main\console\controllers;
 
 use Craft;
 use craft\console\Controller;
+use craft\elements\Asset;
 use craft\elements\Entry;
 use GuzzleHttp\Exception\GuzzleException;
 use yii\console\ExitCode;
@@ -63,6 +64,34 @@ class AssetsController extends Controller
 
 
         $this->stdout("Done with $errors error(s)" . PHP_EOL);
+
+        return ExitCode::OK;
+    }
+
+    public function actionDeleteUnusedImages()
+    {
+        $this->stdout("Deleting unused images" . PHP_EOL);
+
+        $images = Asset::find()
+            ->volume('images')
+            ->kind('image')
+            ->all();
+
+        foreach ($images as $image) {
+            $isUsed = Entry::find()
+                ->relatedTo([
+                    'or',
+                    ['targetElement' => $image],
+                    ['targetElement' => $image, 'field' => 'bodyContent.image']
+                ])
+                ->site('*')
+                ->exists();
+
+            if (!$isUsed) {
+                $this->stdout("Deleting {$image->folderPath} {$image->title} ({$image->id})" . PHP_EOL);
+                Craft::$app->getElements()->deleteElement($image);
+            }
+        }
 
         return ExitCode::OK;
     }
