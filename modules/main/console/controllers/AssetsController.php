@@ -85,6 +85,10 @@ class AssetsController extends Controller
                     ['targetElement' => $image, 'field' => 'bodyContent.image']
                 ])
                 ->site('*')
+                ->status(null)
+                ->drafts(null)
+                ->revisions(null)
+                ->provisionalDrafts(null)
                 ->exists();
 
             if (!$isUsed) {
