@@ -100,6 +100,26 @@ fieldLayouts:
         name: Content
         uid: 7df95195-2e58-4351-9695-13247cc8839d
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            template: _cp/local-images
+            type: craft\fieldlayoutelements\Template
+            uid: c03ef924-c64d-4fb4-9509-0687e16b9cc6
+            userCondition: null
+            width: 100
+          -
+            elementCondition: null
+            template: _cp/related-entries
+            type: craft\fieldlayoutelements\Template
+            uid: 9cc0a276-a1cf-4c5e-953c-020e72a6d5be
+            userCondition: null
+            width: 100
+        name: Info
+        uid: 33ee5cf5-2545-423b-8fa2-e4ae0608171a
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

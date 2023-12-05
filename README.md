@@ -71,6 +71,7 @@ Here is a high level overview of how the spec would have looked like, see commen
 * A 'List item' block type for lists of events/exhitibions etc, active only for articles.
 * A 'Related entries' field for articles to link to other articles across all sites.
 * Location pages show related articles with their corresponding 'List item' blocks.
+* Images that are uploaded to articles are saved in a special dedicated folder for the entry.
 * A search page with the option to search across all sites or just the current site.
 * Support dark mode.
 
@@ -83,7 +84,8 @@ Here is a high level overview of how the spec would have looked like, see commen
 * No PHP (almost).
 * Tailwind CSS.
 * Main layout with the option to use different content widths.
-* CP UI Elements for showing reverse relationships and conflicting drafts (makes sense only in Pro).
+* CP UI Elements for showing reverse relationships, entry specific images and conflicting drafts (makes sense only in
+  Pro).
 * Img macro for handling images.
 * Vite for compiling assets.
 * Page section with different entry types.

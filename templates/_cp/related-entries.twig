@@ -31,7 +31,10 @@
             {% for entry in entries %}
                 <tr>
                     <td>
-                        <span class="status {{ entry.status }}"></span>
+                        <span class="status {{ entry.status }}"
+                              ondblclick='{{ "Craft.createElementEditor('craft\\\\elements\\\\Entry', {elementId:
+                        #{entry.id}, siteId: #{entry.site.id}})" }}'
+                        ></span>
                         <a href="{{ entry.cpEditUrl }}">{{ entry.title }}</a>
                     </td>
                     <td>

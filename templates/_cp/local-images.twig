@@ -1,0 +1,62 @@
+<h2>{{ 'Local Images'|t }}</h2>
+
+{% set path = "entry/#{element.canonicalId}/" %}
+
+{% set images = craft.assets
+    .volume('images')
+    .folderPath(path)
+.collect %}
+
+{% if images.count %}
+    <p>
+        <button type="button" onclick="location.reload()">
+            {{ 'Refresh if images are uploaded after last page load'|t }}
+        </button>
+    </p>
+    <table class="table data fullwidth">
+        <thead>
+        <tr>
+            <th>{{ 'Title'|t('app') }}</th>
+            <th>{{ 'Alt Text'|t('site') }}</th>
+            <th>{{ 'Dimensions'|t('app') }}</th>
+            <th>{{ 'File Modified Date'|t('app') }}</th>
+            <th title="Link" scope="col" data-attribute="link" aria-sort="none"><span data-icon="world"
+                                                                                      aria-hidden="true"></span>
+                <span class="visually-hidden">Link</span>
+                <div class="spinner"></div>
+            </th>
+        </tr>
+        </thead>
+
+        {% for image in images %}
+            <tr>
+                <td style="display: flex; align-items: center">
+                    {{ image.img({width: 43})|attr({
+                        style: 'border-radius: 3px;',
+                        ondblclick: "Craft.createElementEditor('craft\\\\elements\\\\Asset', {elementId: #{image.id}, siteId: #{element.site.id}})"
+                    }) }}
+                    <a style="padding-left:8px;" href="{{ image.cpEditUrl }}">{{ image.title }}</a>
+                </td>
+                <td>
+                    {{ image.altText }}
+                </td>
+                <td>
+                    {{ image.dimensions }}
+                </td>
+                <td>
+                    {{ craft.app.formatter.asRelativeTime(image.dateModified) }}
+                </td>
+                <td data-title="Link" data-attr="link"><a
+                            href="{{ image.url }}"
+                            title="Visit webpage" rel="noopener" target="_blank" data-icon="world"
+                            aria-label="View"></a>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% else %}
+    <p>
+        {{ 'Nothing found.'|t }}
+    </p>
+{% endif %}
