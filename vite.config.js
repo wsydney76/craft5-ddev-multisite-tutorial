@@ -7,14 +7,14 @@ import viteCompression from 'vite-plugin-compression';
 /**
  * @type {import('vite').UserConfig}
  */
-export default ({ command }) => {
+export default ({command}) => {
     return {
         base: command === 'serve' ? '' : '/assets/dist/',
         build: {
             commonjsOptions: {
                 transformMixedEsModules: true,
             },
-            manifest: true,
+            manifest: "manifest.json",
             outDir: path.resolve(__dirname, 'web/assets/dist/'),
             assetsDir: './',
             rollupOptions: {

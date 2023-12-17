@@ -2,7 +2,7 @@
 
 const colors = require('tailwindcss/colors')
 
-module.exports = {
+export default {
     content: [
         "./templates/**/*.{twig,svg}"
     ],
