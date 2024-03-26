@@ -1,15 +1,13 @@
-columnSuffix: jbzvoxct
-contentColumnType: string
-handle: altText
+columnSuffix: null
+handle: text
 instructions: null
-name: 'Alt Text'
+name: 'Body Content - Text - Text'
 searchable: true
 settings:
-  byteLimit: 255
+  byteLimit: null
   charLimit: null
   code: false
-  columnType: string
-  initialRows: 1
+  initialRows: 4
   multiline: true
   placeholder: null
   uiMode: normal

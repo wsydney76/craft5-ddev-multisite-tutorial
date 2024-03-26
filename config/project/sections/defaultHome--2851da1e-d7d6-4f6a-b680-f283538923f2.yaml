@@ -1,6 +1,9 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 171bbc5b-3ff0-4585-b77f-7b428f9e1bb4 # Default Home
 handle: defaultHome
+maxAuthors: 1
 name: 'Default Home'
 previewTargets:
   -
@@ -11,9 +14,6 @@ previewTargets:
       -
         - urlFormat
         - '{url}'
-      -
-        - refresh
-        - '1'
 propagationMethod: all
 siteSettings:
   1181b464-1dd8-415e-86a1-422a8df582d0: # Default Deutsch

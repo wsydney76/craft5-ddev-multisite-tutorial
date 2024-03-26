@@ -65,10 +65,9 @@ fieldLayouts:
         name: Content
         uid: 5bc662bc-01e1-44a9-b2ba-ee4a2bca9b8e
         userCondition: null
-handle: default
+handle: location_default
 hasTitleField: true
-name: Default
-section: fde6b0e6-02b7-426c-9600-7c39eaf0a485 # Location
+name: 'Location - Default'
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

@@ -1,7 +1,23 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - eb3278b0-e772-48a7-84b6-fae65d958234 # Locations Index
+  - 3c3640d4-1332-4e1a-8745-aab9d3646d81 # Articles Index
+  - 033dce53-e320-4834-8bd9-1e93b951e37f # Topics Index
+  - 7d425fdf-837b-4d9d-8aa4-8b55fa3a4d82 # Search
+  - fbf00eb2-4a16-40ca-96bb-3fadd2bf459c # Page - Default
 handle: page
+maxAuthors: 1
 name: Page
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: all
 siteSettings:
   1efc3da2-ad70-455b-8d5a-4f712d3e3482: # Berlin Türkçe

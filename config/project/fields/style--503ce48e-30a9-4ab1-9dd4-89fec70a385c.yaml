@@ -1,0 +1,21 @@
+columnSuffix: vaeqrzhy
+handle: style
+instructions: null
+name: 'Body Content - Image - Style'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wide (XL screens only)'
+        -
+          - value
+          - wide
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

@@ -1,20 +1,20 @@
 columnSuffix: null
-contentColumnType: string
-handle: topics
+handle: location
 instructions: null
-name: Topics
-searchable: true
+name: 'Body Content - List Item - Location'
+searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
-  minRelations: 1
-  selectionLabel: 'Add a topic'
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: false
   sources:
-    - 'section:599c71b9-f295-4a4d-b1c3-7792f4da3dd6' # Topic
+    - 'section:fde6b0e6-02b7-426c-9600-7c39eaf0a485' # Location
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

@@ -49,7 +49,6 @@ fieldLayouts:
 handle: search
 hasTitleField: true
 name: Search
-section: 84b98802-2548-4aed-b67e-fc97f6ed9e30 # Page
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: language

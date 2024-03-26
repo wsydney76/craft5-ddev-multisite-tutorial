@@ -1,7 +1,19 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 1e1a1488-33d1-46dd-91d6-f7d1a7ef1434 # Default
 handle: topic
+maxAuthors: 1
 name: Topic
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: custom
 siteSettings:
   1efc3da2-ad70-455b-8d5a-4f712d3e3482: # Berlin Türkçe

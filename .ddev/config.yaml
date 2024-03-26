@@ -1,4 +1,4 @@
-name: craft4-multisite-tutorial
+name: craft5-multisite-tutorial
 type: craftcms
 docroot: web
 php_version: "8.2"

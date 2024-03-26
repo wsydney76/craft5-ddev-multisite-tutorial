@@ -61,7 +61,6 @@ fieldLayouts:
 handle: defaultHome
 hasTitleField: true
 name: 'Default Home'
-section: 2851da1e-d7d6-4f6a-b680-f283538923f2 # Default Home
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: language

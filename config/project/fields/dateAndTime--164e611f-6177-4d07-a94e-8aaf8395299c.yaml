@@ -1,15 +1,13 @@
-columnSuffix: jbzvoxct
-contentColumnType: string
-handle: altText
+columnSuffix: drclogkp
+handle: dateAndTime
 instructions: null
-name: 'Alt Text'
-searchable: true
+name: 'Body Content - List Item - Date and Time'
+searchable: false
 settings:
-  byteLimit: 255
+  byteLimit: null
   charLimit: null
   code: false
-  columnType: string
-  initialRows: 1
+  initialRows: 2
   multiline: true
   placeholder: null
   uiMode: normal

@@ -6,6 +6,7 @@ use Craft;
 use craft\base\ElementInterface;
 use craft\elements\Entry;
 use craft\events\BlockTypesEvent;
+use craft\events\DefineEntryTypesForFieldEvent;
 use craft\fields\Matrix;
 use yii\base\Event;
 use yii\base\Module as BaseModule;
@@ -43,8 +44,8 @@ class Module extends BaseModule
 
         Event::on(
             Matrix::class,
-            Matrix::EVENT_SET_FIELD_BLOCK_TYPES,
-            function(BlockTypesEvent $event) {
+            Matrix::EVENT_DEFINE_ENTRY_TYPES,
+            function(DefineEntryTypesForFieldEvent $event) {
                 $this->hideListItemBlockType($event->element, $event->sender, $event->blockTypes);
             });
     }
@@ -61,6 +62,10 @@ class Module extends BaseModule
     {
         // Only handle entries
         if (!$element instanceof Entry) {
+            return;
+        }
+
+        if (!$element->section) {
             return;
         }
 

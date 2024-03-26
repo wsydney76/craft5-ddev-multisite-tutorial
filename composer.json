@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "4.8.5",
-    "nystudio107/craft-vite": "4.0.9",
+    "craftcms/cms": "^5.0.0-RC1",
+    "nystudio107/craft-vite": "^5.0.0-beta.3",
     "vlucas/phpdotenv": "^5.4"
   },
   "require-dev": {
-    "craftcms/generator": "^1.0",
+    "craftcms/generator": "^2.0.1",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
@@ -21,7 +21,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.0.2"
+      "php": "8.2"
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
@@ -45,5 +45,7 @@
       "url": "https://composer.craftcms.com",
       "canonical": false
     }
-  ]
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

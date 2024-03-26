@@ -1,7 +1,19 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 315bfd90-74a8-4b2a-acd2-f32b780c71cb # Location - Default
 handle: location
+maxAuthors: 1
 name: Location
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
 propagationMethod: siteGroup
 siteSettings:
   1efc3da2-ad70-455b-8d5a-4f712d3e3482: # Berlin Türkçe

@@ -1,0 +1,12 @@
+columnSuffix: uypoopcs
+handle: externalLink
+instructions: null
+name: 'Body Content - List Item - External Link'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\Url

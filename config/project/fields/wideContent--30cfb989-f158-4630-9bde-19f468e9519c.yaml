@@ -1,6 +1,5 @@
 columnSuffix: qgffqhpd
 contentColumnType: boolean
-fieldGroup: bd76fb6e-8765-41d3-8e8a-02e37e127c80 # Common
 handle: wideContent
 instructions: 'Whether this page will use in a wider screen size'
 name: 'Wide Content'

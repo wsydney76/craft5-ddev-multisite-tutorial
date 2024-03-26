@@ -1,18 +1,16 @@
-columnSuffix: wcgkvvuu
-contentColumnType: string(240)
-handle: copyright
+columnSuffix: nwfddwxj
+handle: attribution
 instructions: null
-name: Copyright
+name: 'Body Content - Quote - Attribution'
 searchable: false
 settings:
   byteLimit: null
   charLimit: 60
   code: false
-  columnType: null
   initialRows: 4
   multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null
-translationMethod: none
+translationMethod: language
 type: craft\fields\PlainText

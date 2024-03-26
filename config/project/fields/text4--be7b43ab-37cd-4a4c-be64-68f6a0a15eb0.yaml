@@ -1,16 +1,14 @@
-columnSuffix: jbzvoxct
-contentColumnType: string
-handle: altText
+columnSuffix: zuqosjkm
+handle: text4
 instructions: null
-name: 'Alt Text'
+name: 'Body Content - Quote - Text'
 searchable: true
 settings:
-  byteLimit: 255
+  byteLimit: 250
   charLimit: null
   code: false
-  columnType: string
-  initialRows: 1
-  multiline: true
+  initialRows: 4
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

@@ -74,7 +74,6 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 599c71b9-f295-4a4d-b1c3-7792f4da3dd6 # Topic
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: language
