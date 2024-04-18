@@ -1,5 +1,6 @@
+color: null
 fieldLayouts:
-  7ec9ceec-1b89-4341-bd80-ecb0762c7a01:
+  afa56724-15a5-4e36-a545-e0b8e6243f94:
     tabs:
       -
         elementCondition: null
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -27,57 +30,58 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e5cd2e98-d32f-4d0d-b0e0-1a3789d693d7
+            uid: 25329fe6-0a35-4435-8936-3d1cad02d4cb
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 491e5a77-e5a3-4c57-8a40-e7af97b1cd20
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
-            instructions: null
-            label: null
+            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 159d0312-be83-4aac-a7f3-0e309b47d439
+            uid: 7d7cbe74-afc6-4291-ae46-c729b5f78442
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: 77fa098d-6b8f-48f1-9686-e70932830f94
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
           -
             elementCondition: null
-            template: _cp/related-entries.twig
+            fieldUid: 9acad709-b05a-4ba4-a090-8c7855d52875 # Address
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bdb6f666-a7d8-4206-ac3d-47159c88280f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            template: _cp/related-entries
             type: craft\fieldlayoutelements\Template
-            uid: 47cd7a1b-42b9-4167-923e-c2a0801de697
+            uid: 97f79537-d49d-433e-9719-b95bdf06537a
             userCondition: null
             width: 100
-        name: Posts
-        uid: f02f9a31-8193-4e0f-9c45-37b9b863edd4
+        name: Content
+        uid: 5bc662bc-01e1-44a9-b2ba-ee4a2bca9b8e
         userCondition: null
-handle: default
+handle: location
 hasTitleField: true
-name: Default
+icon: location-dot
+name: Location
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
-slugTranslationMethod: language
-sortOrder: 1
+slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
-titleTranslationMethod: language
+titleTranslationMethod: site

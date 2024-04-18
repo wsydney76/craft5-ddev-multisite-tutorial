@@ -1,3 +1,5 @@
+altTranslationKeyFormat: null
+altTranslationMethod: language
 fieldLayouts:
   6e5b9279-e821-4871-a89d-39660a84f991:
     tabs:
@@ -12,6 +14,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +23,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -32,14 +36,27 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
             elementCondition: null
-            fieldUid: cc3fbab0-826f-4aed-b2aa-eeaecc2964bf # Alt Text
+            id: null
+            includeInCards: false
             instructions: null
             label: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
             required: false
+            rows: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 50c11aa7-22fa-4f6f-8a72-30b3147f36ee
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 4c320006-d090-4e1e-9c1b-90eb8bbdf53a
             userCondition: null
             warning: null
             width: 100
@@ -50,7 +67,8 @@ fs: $TEMP_IMAGES_FS
 handle: tempImages
 name: 'Temp Images'
 sortOrder: 2
+subpath: ''
 titleTranslationKeyFormat: null
-titleTranslationMethod: site
+titleTranslationMethod: language
 transformFs: $IMAGE_TRANSFORM_FS
 transformSubpath: tempimages

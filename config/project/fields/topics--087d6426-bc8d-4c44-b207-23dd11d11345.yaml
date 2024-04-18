@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: topics
 instructions: null
 name: Topics
@@ -12,12 +11,13 @@ settings:
   maxRelations: null
   minRelations: 1
   selectionLabel: 'Add a topic'
+  showCardsInGrid: true
   showSiteMenu: false
   sources:
     - 'section:599c71b9-f295-4a4d-b1c3-7792f4da3dd6' # Topic
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Entries

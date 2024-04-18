@@ -46,7 +46,7 @@ class Module extends BaseModule
             Matrix::class,
             Matrix::EVENT_DEFINE_ENTRY_TYPES,
             function(DefineEntryTypesForFieldEvent $event) {
-                $this->hideListItemBlockType($event->element, $event->sender, $event->blockTypes);
+                $this->hideListItemBlockType($event->element, $event->sender, $event->entryTypes);
             });
     }
 
@@ -55,10 +55,10 @@ class Module extends BaseModule
      *
      * @param ElementInterface $element The element to check.
      * @param object $field The field to check.
-     * @param array $blockTypes The array of block types to modify.
+     * @param array $entryTypes The array of block types to modify.
      * @return void
      */
-    private function hideListItemBlockType(ElementInterface $element, object $field, array &$blockTypes): void
+    private function hideListItemBlockType(ElementInterface $element, object $field, array &$entryTypes): void
     {
         // Only handle entries
         if (!$element instanceof Entry) {
@@ -80,9 +80,9 @@ class Module extends BaseModule
         }
 
         // Hide list item block type
-        foreach ($blockTypes as $i => $blockType) {
-            if ($blockType->handle === 'listItem') {
-                unset($blockTypes[$i]);
+        foreach ($entryTypes as $i => $entryType) {
+            if ($entryType->handle === 'listItem') {
+                unset($entryTypes[$i]);
             }
         }
     }

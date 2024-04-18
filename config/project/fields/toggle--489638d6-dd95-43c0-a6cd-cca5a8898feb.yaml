@@ -1,8 +1,7 @@
-columnSuffix: svvaemtm
-contentColumnType: boolean
-handle: featured
+columnSuffix: null
+handle: toggle
 instructions: null
-name: Featured
+name: Toggle
 searchable: false
 settings:
   default: false

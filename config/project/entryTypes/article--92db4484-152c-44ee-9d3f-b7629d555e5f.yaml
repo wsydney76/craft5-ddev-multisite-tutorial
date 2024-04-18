@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   902cb6e1-33ee-4b4e-9696-3eadcee468a9:
     tabs:
@@ -19,6 +20,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -27,6 +29,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -40,21 +43,27 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e708fcd6-e624-4bca-803c-34ab069e72ed # Featured
+            fieldUid: 489638d6-dd95-43c0-a6cd-cca5a8898feb # Toggle
+            handle: featured
+            includeInCards: false
             instructions: 'The article will stick to top on the home page and in the article index. Mark just one or two articles!'
-            label: null
+            label: Featured
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: af872e03-1253-4002-8d19-6dae768135a3
+            uid: 5bf36a6b-c859-40b1-9417-477d656bb0dd
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: true
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -65,32 +74,41 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 087d6426-bc8d-4c44-b207-23dd11d11345 # Topics
+            handle: null
+            includeInCards: true
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7568e4b2-2c2c-49e0-b309-913d2b4224af
             userCondition: null
             warning: null
-            width: 25
+            width: 100
           -
             elementCondition: null
             fieldUid: 992f51d0-e22b-4c12-a6ba-d098fa334cd3 # Related Entries
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fbfcfd78-d08f-441c-8b8c-9ac8556e13b8
             userCondition: null
             warning: null
-            width: 25
+            width: 100
           -
             elementCondition: null
             fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
+            handle: null
+            includeInCards: false
             instructions: null
             label: Content
+            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -121,13 +139,14 @@ fieldLayouts:
         name: Info
         uid: 33ee5cf5-2545-423b-8fa2-e4ae0608171a
         userCondition: null
-handle: article_default
+handle: article
 hasTitleField: true
-name: 'Article - Default'
+icon: newspaper
+name: Article
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: language
-sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: language

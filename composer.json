@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "license": "Unlicense",
   "require": {
-    "craftcms/cms": "^5.0.0-RC1",
-    "nystudio107/craft-vite": "^5.0.0-beta.3",
+    "craftcms/cms": "^5.0.4",
+    "nystudio107/craft-vite": "^5.0.0",
     "vlucas/phpdotenv": "^5.4"
   },
   "require-dev": {

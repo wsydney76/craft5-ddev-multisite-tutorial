@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 92db4484-152c-44ee-9d3f-b7629d555e5f # Article - Default
+  - 92db4484-152c-44ee-9d3f-b7629d555e5f # Article
 handle: article
 maxAuthors: 1
 name: Article

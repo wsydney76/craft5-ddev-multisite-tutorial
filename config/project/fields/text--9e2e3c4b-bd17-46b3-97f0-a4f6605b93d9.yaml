@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: text
 instructions: null
-name: 'Body Content - Text - Text'
+name: Text
 searchable: true
 settings:
   byteLimit: null

@@ -3,6 +3,7 @@
 <div>
     {# The relatedTo condition needs to updated on content model changes! #}
     {% set entries = craft.entries
+        .section('*')
         .relatedTo([
             'or',
             {targetElement: element},

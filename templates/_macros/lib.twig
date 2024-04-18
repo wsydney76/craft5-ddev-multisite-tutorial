@@ -15,7 +15,7 @@
 
 
     {# Add alt attribute, as Crafts built-in alt field is not translatable #}
-    {% set attr = attr | merge({alt: image.altText ?: image.title}) %}
+    {% set attr = attr | merge({alt: image.alt ?: image.title}) %}
 
     {# Finally... #}
     {{ image.img(transform, srcset)|attr(attr) }}

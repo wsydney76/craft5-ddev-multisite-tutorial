@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1711450752
+dateModified: 1713445063
 elementSources:
   craft\elements\Asset:
     -
@@ -13,7 +13,7 @@ elementSources:
       disabled: false
       key: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
       tableAttributes:
-        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf' # Alt Text
+        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
         - imageSize
         - dateModified
         - link
@@ -25,7 +25,7 @@ elementSources:
       disabled: false
       key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
       tableAttributes:
-        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf' # Alt Text
+        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
         - imageSize
         - dateModified
         - link
@@ -34,7 +34,7 @@ elementSources:
       disabled: false
       key: 'volume:3b60e4f9-36bb-4456-bee5-67160b5a3108' # User Photos
       tableAttributes:
-        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf' # Alt Text
+        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
         - imageSize
         - dateModified
         - link
@@ -48,7 +48,7 @@ elementSources:
         conditionRules:
           -
             class: craft\fields\conditions\TextFieldConditionRule
-            fieldUid: cc3fbab0-826f-4aed-b2aa-eeaecc2964bf # Alt Text
+            fieldUid: cc3fbab0-826f-4aed-b2aa-eeaecc2964bf
             operator: empty
             uid: 8bdb60d1-3489-4d35-b037-93f42b1ba2c4
             value: ''
@@ -116,7 +116,6 @@ elementSources:
       disabled: false
       key: 'section:7a045fb7-ed74-4c72-8482-fc700ab663ca' # Article
       tableAttributes:
-        - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
         - drafts
         - postDate
         - link
@@ -128,7 +127,6 @@ elementSources:
       disabled: false
       key: 'section:fde6b0e6-02b7-426c-9600-7c39eaf0a485' # Location
       tableAttributes:
-        - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
         - 'field:9acad709-b05a-4ba4-a090-8c7855d52875' # Address
         - link
       type: native
@@ -156,7 +154,6 @@ elementSources:
       tableAttributes:
         - drafts
         - type
-        - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
         - postDate
         - link
       type: native
@@ -167,9 +164,7 @@ elementSources:
       disabled: false
       key: 'section:599c71b9-f295-4a4d-b1c3-7792f4da3dd6' # Topic
       tableAttributes:
-        - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
         - postDate
-        - author
         - link
       type: native
     -
@@ -180,16 +175,17 @@ elementSources:
         class: craft\elements\conditions\entries\EntryCondition
         conditionRules:
           -
-            class: craft\fields\conditions\LightswitchFieldConditionRule
-            fieldUid: e708fcd6-e624-4bca-803c-34ab069e72ed # Featured
-            uid: 731276c2-ed86-49a4-8fb2-8980997adb2d
-            value: true
-          -
             class: craft\elements\conditions\entries\SectionConditionRule
             operator: in
             uid: 6bbd9b7f-3033-409f-9dd3-b27586840f2d
             values:
               - 7a045fb7-ed74-4c72-8482-fc700ab663ca # Article
+          -
+            class: craft\fields\conditions\LightswitchFieldConditionRule
+            fieldUid: 489638d6-dd95-43c0-a6cd-cca5a8898feb # Toggle
+            layoutElementUid: 5bf36a6b-c859-40b1-9417-477d656bb0dd
+            uid: fc875119-5579-4d02-b782-07d48fbf391a
+            value: true
         elementType: craft\elements\Entry
         fieldContext: global
       defaultSort:
@@ -198,8 +194,7 @@ elementSources:
       key: 'custom:00f507c2-b782-472d-b85c-f87355d9f487'
       label: 'Featured Articles'
       tableAttributes:
-        - 'field:7df417e8-1eea-46d8-85a7-2a20370a881e' # Featured Image
-        - author
+        - type
         - postDate
         - link
       type: custom
@@ -249,7 +244,7 @@ fs:
 meta:
   __names__:
     1a974179-ff63-42af-9f2f-b2c34cbfefe2: Munich # Munich
-    1e1a1488-33d1-46dd-91d6-f7d1a7ef1434: Default # Default
+    1e1a1488-33d1-46dd-91d6-f7d1a7ef1434: Topic # Topic
     1efc3da2-ad70-455b-8d5a-4f712d3e3482: 'Berlin Türkçe' # Berlin Türkçe
     3b60e4f9-36bb-4456-bee5-67160b5a3108: 'User Photos' # User Photos
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: Berlin # Berlin
@@ -257,51 +252,62 @@ meta:
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
     5a0be839-14a2-465e-a504-bb63dd0281e9: Images # Images
     5b0c38db-9ab4-47d8-b4a7-913710c08ca6: 'Berlin English' # Berlin English
+    6e507a59-e39c-49c8-9d8b-2066317bda3f: Location # Location
     6ef5e992-55f6-464f-b946-3eda031693df: Hamburg # Hamburg
     7a045fb7-ed74-4c72-8482-fc700ab663ca: Article # Article
     7d425fdf-837b-4d9d-8aa4-8b55fa3a4d82: Search # Search
     7df417e8-1eea-46d8-85a7-2a20370a881e: 'Featured Image' # Featured Image
+    8cdefc82-9e0e-4dae-8feb-1609c6c9873b: 'Single Line Text' # Single Line Text
     8f7d3ebf-f42d-4024-aeae-1fad436fd93c: 'Home Text' # Home Text
     8fc13168-aa9d-4e4b-9754-de59335df6b3: Icon # Icon
     9acad709-b05a-4ba4-a090-8c7855d52875: Address # Address
+    9e2e3c4b-bd17-46b3-97f0-a4f6605b93d9: Text # Text
     9e8a3f1b-ec7c-4c9a-9971-b65428c62592: 'Site Info - Global Settings' # Site Info - Global Settings
     9eab0798-59cc-46ce-b621-7f5fbca4ac01: 'Monaco Italiano' # Monaco Italiano
-    30cfb989-f158-4630-9bde-19f468e9519c: 'Wide Content' # Wide Content
     033dce53-e320-4834-8bd9-1e93b951e37f: 'Topics Index' # Topics Index
     34c4b5cc-4b07-4d8f-a7fb-c6fbdb96df58: 'Berlin Japanese' # Berlin Japanese
     74bdc2b4-7971-4bf7-ae69-c90f54f03c60: 'Soltau Deutsch' # Soltau Deutsch
+    81e6a0d6-13c5-47ad-a9e6-c2181276db9c: Text # Text
     84b98802-2548-4aed-b67e-fc97f6ed9e30: Page # Page
     087d6426-bc8d-4c44-b207-23dd11d11345: Topics # Topics
-    92db4484-152c-44ee-9d3f-b7629d555e5f: 'Article - Default' # Article - Default
-    171bbc5b-3ff0-4585-b77f-7b428f9e1bb4: 'Default Home' # Default Home
-    315bfd90-74a8-4b2a-acd2-f32b780c71cb: 'Location - Default' # Location - Default
+    92db4484-152c-44ee-9d3f-b7629d555e5f: Article # Article
+    164e611f-6177-4d07-a94e-8aaf8395299c: 'Date and Time' # Date and Time
+    171bbc5b-3ff0-4585-b77f-7b428f9e1bb4: 'Default Site Home' # Default Site Home
+    315bfd90-74a8-4b2a-acd2-f32b780c71cb: Location # Location
+    503ce48e-30a9-4ab1-9dd4-89fec70a385c: 'Image Style' # Image Style
     574daf56-8e00-42e1-9bcb-23461245101f: Soltau # Soltau
     599c71b9-f295-4a4d-b1c3-7792f4da3dd6: Topic # Topic
     733a21de-d87c-45c5-9a67-c91c5a3f6172: 'Munich Hebrew' # Munich Hebrew
+    735b5e6e-8026-4de4-8e32-14e03d975565: 'Content Image' # Content Image
     992f51d0-e22b-4c12-a6ba-d098fa334cd3: 'Related Entries' # Related Entries
     1181b464-1dd8-415e-86a1-422a8df582d0: 'Default Deutsch' # Default Deutsch
     1370f3ef-a65e-4f13-9c07-179883d907a1: 'Hamburg English' # Hamburg English
     2851da1e-d7d6-4f6a-b680-f283538923f2: 'Default Home' # Default Home
     6856c92d-c593-4425-8886-27e609d74667: Home # Home
+    489638d6-dd95-43c0-a6cd-cca5a8898feb: Toggle # Toggle
+    3711281e-d315-423d-a4b3-73aecdb65eac: 'List Item' # List Item
     6293568b-45d8-41e5-a79e-9c084dc06cd3: 'München Deutsch' # München Deutsch
     65355561-253f-4578-abb7-0e27ed694878: 'Berlin Deutsch' # Berlin Deutsch
+    69164545-5879-454d-a57e-f703ca431331: Image # Image
     85898001-9c9c-4d46-abf9-a928e44f0d48: 'Body Content' # Body Content
+    a00e6fe6-6460-422d-b845-67c760aa1651: 'Heading  Level' # Heading  Level
     a75bc4db-f149-453d-9972-1c3685ec1b1d: 'Featured Image By Site' # Featured Image By Site
+    a82ceefa-7dad-42b6-bb96-63b0f115ffdf: 'External Link' # External Link
     a599f4be-6dfc-4e41-a635-772762da5abe: 'Hamburg Chinese' # Hamburg Chinese
     abefa0bd-6b36-4b4f-a9de-a4304e7b66a3: 'Public Schema' # Public Schema
+    ac457f93-1a50-473e-9983-a899a7f0bed7: Heading # Heading
     b4d80b0f-48b3-4b07-a046-5008ae50f05e: Default # Default
+    c7a4af96-920c-42c0-b6d8-202ab522bdab: 'List Item Image' # List Item Image
     c780bb7a-337c-46ba-95c4-c0dcbfcb457d: Home # Home
-    cc3fbab0-826f-4aed-b2aa-eeaecc2964bf: 'Alt Text' # Alt Text
     cc5167a2-3fc7-4600-bcef-c928500a7155: 'Hamburg Deutsch' # Hamburg Deutsch
     d6f6663f-190b-40ff-b18b-36267fcf71f6: 'Site Info - Global Settings' # Site Info - Global Settings
-    d2620d92-1e9a-4bd4-b474-5a73547f43c9: 'Increase Font Size' # Increase Font Size
+    da7ce2e3-54b0-43df-9798-32a617f8b887: Quote # Quote
     e0cd6b9d-eb8b-4934-8c3d-704ca2f149bb: 'Secondary Image' # Secondary Image
-    e708fcd6-e624-4bca-803c-34ab069e72ed: Featured # Featured
     eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
     eb3278b0-e772-48a7-84b6-fae65d958234: 'Locations Index' # Locations Index
     ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     f0cfaa93-fb17-46e7-aeff-cc02cf25aeee: 'Munich English' # Munich English
-    fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: 'Page - Default' # Page - Default
+    fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Page # Page
     fde6b0e6-02b7-426c-9600-7c39eaf0a485: Location # Location
 plugins:
   vite:
@@ -315,11 +321,3 @@ system:
   retryDuration: 30
   schemaVersion: 5.0.0.20
   timeZone: $SYSTEM_TIMEZONE
-users:
-  allowPublicRegistration: false
-  deactivateByDefault: false
-  defaultGroup: ''
-  photoSubpath: null
-  photoVolumeUid: 3b60e4f9-36bb-4456-bee5-67160b5a3108 # User Photos
-  requireEmailVerification: true
-  validateOnPublicRegistration: false

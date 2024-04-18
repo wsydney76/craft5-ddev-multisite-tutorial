@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: 4b050685-0425-4094-bde2-85e2eedd0e12
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 728f6879-714e-4f0d-9583-cc98276510b1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8cdefc82-9e0e-4dae-8feb-1609c6c9873b # Single Line Text
             handle: text
             includeInCards: true
             instructions: null
@@ -16,13 +45,13 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a5f31ac1-d94c-4311-82fa-1ef9ce42f581
+            uid: a1dcd098-fb7d-4441-8772-72184789fafb
             userCondition: null
             warning: null
             width: 75
           -
             elementCondition: null
-            fieldUid: a00e6fe6-6460-422d-b845-67c760aa1651
+            fieldUid: a00e6fe6-6460-422d-b845-67c760aa1651 # Heading  Level
             handle: null
             includeInCards: false
             instructions: null
@@ -40,10 +69,10 @@ fieldLayouts:
         userCondition: null
 handle: heading
 hasTitleField: false
-icon: null
+icon: text
 name: Heading
-showSlugField: true
-showStatusField: true
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: null

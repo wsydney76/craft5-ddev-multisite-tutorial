@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: relatedEntries
 instructions: null
 name: 'Related Entries'
@@ -12,6 +11,7 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: null
+  showCardsInGrid: true
   showSiteMenu: true
   sources:
     - 'section:7a045fb7-ed74-4c72-8482-fc700ab663ca' # Article
@@ -19,7 +19,7 @@ settings:
     - 'section:599c71b9-f295-4a4d-b1c3-7792f4da3dd6' # Topic
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: cards
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Entries

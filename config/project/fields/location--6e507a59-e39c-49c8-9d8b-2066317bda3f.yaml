@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: location
 instructions: null
-name: 'Body Content - List Item - Location'
+name: Location
 searchable: false
 settings:
   allowSelfRelations: false
@@ -17,7 +17,7 @@ settings:
     - 'section:fde6b0e6-02b7-426c-9600-7c39eaf0a485' # Location
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: null
+  viewMode: list
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Entries

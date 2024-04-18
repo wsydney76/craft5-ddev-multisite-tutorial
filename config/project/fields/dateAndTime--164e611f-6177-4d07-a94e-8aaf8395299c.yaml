@@ -1,7 +1,7 @@
 columnSuffix: drclogkp
 handle: dateAndTime
 instructions: null
-name: 'Body Content - List Item - Date and Time'
+name: 'Date and Time'
 searchable: false
 settings:
   byteLimit: null

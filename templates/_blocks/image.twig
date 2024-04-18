@@ -1,9 +1,9 @@
 {% from '_macros/lib.twig' import img %}
 
-{% set isWide = block.style.contains('wide') %}
+{% set isWide = block.imageStyle.contains('wide') %}
 
 {# Get image from block. This may be eager loaded or not #}
-{% set image = block.image.one %}
+{% set image = block.contentImage.one %}
 
 {# Play it safe. Although an image is required, it may be missing when live previewing a draft #}
 {% if image %}

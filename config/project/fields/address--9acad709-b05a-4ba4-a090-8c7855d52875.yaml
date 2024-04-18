@@ -1,5 +1,4 @@
 columnSuffix: nldisucj
-contentColumnType: text
 handle: address
 instructions: null
 name: Address
@@ -8,7 +7,6 @@ settings:
   byteLimit: null
   charLimit: null
   code: false
-  columnType: null
   initialRows: 4
   multiline: true
   placeholder: null

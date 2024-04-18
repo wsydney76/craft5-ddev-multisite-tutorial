@@ -26,7 +26,7 @@
 <div class="my-16 space-y-4 rtl:space-x-reverse">
     {% if context == 'article' %}
         {# Show image from block with the locations featured image as fallback #}
-        {% set image = block.image.one ?? location.featuredImage.one %}
+        {% set image = block.listItemImage.one ?? location.featuredImage.one %}
         {% if image %}
             {{ img(image, {
                 transform: {width: 800, height: 300}

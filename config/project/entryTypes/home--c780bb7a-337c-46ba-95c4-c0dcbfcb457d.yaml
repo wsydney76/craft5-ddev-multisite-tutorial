@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   abb633b6-3f52-4939-b871-3ea1ca602a5a:
     tabs:
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -34,8 +37,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: a75bc4db-f149-453d-9972-1c3685ec1b1d # Featured Image By Site
+            handle: null
+            includeInCards: false
             instructions: 'Select different images per site'
             label: 'Featured Image'
+            providesThumbs: true
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -46,8 +52,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: e0cd6b9d-eb8b-4934-8c3d-704ca2f149bb # Secondary Image
+            handle: null
+            includeInCards: false
             instructions: 'This image will be used on the default page'
             label: null
+            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -58,8 +67,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 8f7d3ebf-f42d-4024-aeae-1fad436fd93c # Home Text
+            handle: null
+            includeInCards: true
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -72,11 +84,12 @@ fieldLayouts:
         userCondition: null
 handle: home
 hasTitleField: true
+icon: house
 name: Home
+showSlugField: true
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: language
-sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: language

@@ -1,11 +1,11 @@
-columnSuffix: zuqosjkm
-handle: text4
+columnSuffix: null
+handle: singleLineText
 instructions: null
-name: 'Body Content - Quote - Text'
+name: 'Single Line Text'
 searchable: true
 settings:
-  byteLimit: 250
-  charLimit: null
+  byteLimit: null
+  charLimit: 250
   code: false
   initialRows: 4
   multiline: false

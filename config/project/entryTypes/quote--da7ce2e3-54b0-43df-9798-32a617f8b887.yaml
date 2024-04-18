@@ -6,8 +6,37 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
             elementCondition: null
-            fieldUid: be7b43ab-37cd-4a4c-be64-68f6a0a15eb0
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b89025db-e0fb-45d1-9399-5202374c32fc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8cdefc82-9e0e-4dae-8feb-1609c6c9873b # Single Line Text
             handle: text
             includeInCards: true
             instructions: null
@@ -16,14 +45,14 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3c11856d-7122-4296-b607-943240ccc31e
+            uid: 4009a7ee-f66d-4d61-9b12-abd9c48fd080
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: e7c37b4a-837a-4b30-b183-c2c8d82f92d7
-            handle: null
+            fieldUid: 8cdefc82-9e0e-4dae-8feb-1609c6c9873b # Single Line Text
+            handle: attribution
             includeInCards: false
             instructions: null
             label: Attribution
@@ -31,7 +60,7 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d64e2481-fc99-4ef5-9e2b-f2153f5d9d20
+            uid: 784d5267-5066-42e8-a2ed-a6ad8caa6628
             userCondition: null
             warning: null
             width: 100
@@ -40,10 +69,10 @@ fieldLayouts:
         userCondition: null
 handle: quote
 hasTitleField: false
-icon: null
+icon: quote-right
 name: Quote
-showSlugField: true
-showStatusField: true
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: null

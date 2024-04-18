@@ -1,7 +1,7 @@
 columnSuffix: uypoopcs
 handle: externalLink
 instructions: null
-name: 'Body Content - List Item - External Link'
+name: 'External Link'
 searchable: false
 settings:
   maxLength: 255

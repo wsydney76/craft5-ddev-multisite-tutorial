@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   6c115654-5637-4afa-9257-bbf81fa11b3e:
     tabs:
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -33,21 +36,27 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 30cfb989-f158-4630-9bde-19f468e9519c # Wide Content
-            instructions: null
-            label: null
+            fieldUid: 489638d6-dd95-43c0-a6cd-cca5a8898feb # Toggle
+            handle: wideContent
+            includeInCards: false
+            instructions: 'Whether this page will use a wider screen size'
+            label: 'Wide Content'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 45faead8-c280-4936-9ddf-3a3ec2d07a52
+            uid: 28557df3-3e26-42e3-83c2-c5b628773324
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -58,8 +67,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -72,11 +84,12 @@ fieldLayouts:
         userCondition: null
 handle: locationsIndex
 hasTitleField: true
+icon: map
 name: 'Locations Index'
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: language
-sortOrder: 5
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: language

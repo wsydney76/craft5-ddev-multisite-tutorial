@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: image
+handle: contentImage
 instructions: null
-name: 'Body Content - List Item - Image'
+name: 'Content Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -16,12 +16,12 @@ settings:
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
-  previewMode: full
+  previewMode: thumbs
   restrictFiles: true
-  restrictLocation: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
-  restrictedLocationSubpath: null
+  restrictedLocationSubpath: 'entry/{owner.canonicalId}'
   selectionCondition:
     __assoc__:
       -
@@ -43,7 +43,7 @@ settings:
                 - craft\elements\conditions\assets\WidthConditionRule
               -
                 - uid
-                - 3b1a6395-84d1-4663-bde7-1793af4589ea
+                - c2f227f4-49cc-4b5a-ab14-43a864cbfaea
               -
                 - operator
                 - '>='
@@ -53,15 +53,15 @@ settings:
               -
                 - maxValue
                 - ''
-  selectionLabel: 'Select an image'
+  selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
     - 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
   targetSiteId: null
-  validateRelatedElements: false
+  validateRelatedElements: true
   viewMode: large
 translationKeyFormat: null
 translationMethod: site

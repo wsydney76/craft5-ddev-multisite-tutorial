@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 171bbc5b-3ff0-4585-b77f-7b428f9e1bb4 # Default Home
+  - 171bbc5b-3ff0-4585-b77f-7b428f9e1bb4 # Default Site Home
 handle: defaultHome
 maxAuthors: 1
 name: 'Default Home'

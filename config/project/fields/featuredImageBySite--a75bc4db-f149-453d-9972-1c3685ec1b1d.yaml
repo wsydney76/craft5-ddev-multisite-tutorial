@@ -1,5 +1,4 @@
 columnSuffix: null
-contentColumnType: string
 handle: featuredImageBySite
 instructions: null
 name: 'Featured Image By Site'
@@ -54,6 +53,7 @@ settings:
                 - maxValue
                 - ''
   selectionLabel: null
+  showCardsInGrid: false
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

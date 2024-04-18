@@ -1,3 +1,4 @@
+color: null
 fieldLayouts:
   a70a5bb4-2def-4e0e-a7ea-695b5ed884f2:
     tabs:
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -34,8 +37,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -46,8 +52,11 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -57,13 +66,16 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 30cfb989-f158-4630-9bde-19f468e9519c # Wide Content
-            instructions: null
-            label: null
+            fieldUid: 8cdefc82-9e0e-4dae-8feb-1609c6c9873b # Single Line Text
+            handle: wideContent
+            includeInCards: false
+            instructions: 'Whether this page will use a wider screen size'
+            label: 'Wide Content'
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 130dff67-c8fe-4e57-bd48-4275a86b9c11
+            uid: 2e8dc987-ad17-4787-b976-35a0915861d5
             userCondition: null
             warning: null
             width: 100
@@ -72,11 +84,12 @@ fieldLayouts:
         userCondition: null
 handle: articlesIndex
 hasTitleField: true
+icon: id-card
 name: 'Articles Index'
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: language
-sortOrder: 4
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: language

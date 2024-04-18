@@ -1,7 +1,7 @@
 columnSuffix: nitripkb
-handle: tag
+handle: headingLevel
 instructions: null
-name: 'Body Content - Heading - Level'
+name: 'Heading  Level'
 searchable: false
 settings:
   options:

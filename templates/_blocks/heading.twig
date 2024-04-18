@@ -1,4 +1,4 @@
 {# The tag function allows to use dynamic tags, here h2 or h3 #}
-{{ tag(block.tag.value ?? 'h2', {
+{{ tag(block.headingLevel.value ?? 'h2', {
     text: block.text
 }) }}
