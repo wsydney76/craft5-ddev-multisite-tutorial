@@ -53,6 +53,9 @@ settings:
               -
                 - maxValue
                 - ''
+              -
+                - step
+                - 1
   selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: true
