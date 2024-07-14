@@ -1,4 +1,4 @@
-baseUrl: '@web/munich/he'
+baseUrl: '@weburl/munich/he'
 enabled: '1'
 handle: muc_he
 hasUrls: true

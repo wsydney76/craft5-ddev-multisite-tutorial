@@ -35,11 +35,19 @@ return
         ->optimizeImageFilesize(false)
         ->revAssetUrls(true)
         ->translationDebugOutput(false)
-        ->useIframeResizer()
+        ->resourceBasePath('@webroot/dist/cpresources/')
+        ->resourceBaseUrl('@weburl/dist/cpresources/')
         ->aliases([
+
             // Prevent the @web alias from being set automatically (cache poisoning vulnerability)
+            // The @web alias is not recommended and not used, setting it here to avoid warnings in CP
             '@web' => App::env('PRIMARY_SITE_URL'),
+
+            // Use this as a base url for sites/local filesystems
+            '@weburl' => App::env('PRIMARY_SITE_URL'),
+
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
+
         ]);
 

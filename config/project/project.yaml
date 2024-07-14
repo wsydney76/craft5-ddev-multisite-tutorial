@@ -1,6 +1,6 @@
 assets:
-  tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d # Temp Images
-dateModified: 1718961907
+  tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d
+dateModified: 1720973767
 elementSources:
   craft\elements\Asset:
     -
@@ -13,28 +13,6 @@ elementSources:
       disabled: false
       key: 'volume:5a0be839-14a2-465e-a504-bb63dd0281e9' # Images
       tableAttributes:
-        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
-        - imageSize
-        - dateModified
-        - link
-      type: native
-    -
-      heading: Internal
-      type: heading
-    -
-      disabled: false
-      key: 'volume:ed627edd-73bd-4b75-8684-f410bf4e4b9d' # Temp Images
-      tableAttributes:
-        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
-        - imageSize
-        - dateModified
-        - link
-      type: native
-    -
-      disabled: false
-      key: 'volume:3b60e4f9-36bb-4456-bee5-67160b5a3108' # User Photos
-      tableAttributes:
-        - 'field:cc3fbab0-826f-4aed-b2aa-eeaecc2964bf'
         - imageSize
         - dateModified
         - link
@@ -42,26 +20,6 @@ elementSources:
     -
       heading: Work
       type: heading
-    -
-      condition:
-        class: craft\elements\conditions\assets\AssetCondition
-        conditionRules:
-          -
-            class: craft\fields\conditions\TextFieldConditionRule
-            fieldUid: cc3fbab0-826f-4aed-b2aa-eeaecc2964bf
-            operator: empty
-            uid: 8bdb60d1-3489-4d35-b037-93f42b1ba2c4
-            value: ''
-        elementType: craft\elements\Asset
-        fieldContext: global
-      defaultSort:
-        - title
-        - asc
-      key: 'custom:45fca0e3-5d6e-49eb-8303-d97ff1cc88d5'
-      label: 'Missing alt text'
-      tableAttributes:
-        - location
-      type: custom
     -
       heading: 'Search & Filter'
       type: heading
@@ -94,6 +52,39 @@ elementSources:
         - dateCreated
         - link
       type: custom
+    -
+      condition:
+        class: craft\elements\conditions\assets\AssetCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\assets\HasAltConditionRule
+            uid: a1d94e24-174d-454e-980c-691d8247c353
+            value: false
+        elementType: craft\elements\Asset
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:38ea72c7-ab2f-4c26-a405-f6cb0b66ee44'
+      label: 'Missing alt text'
+      tableAttributes:
+        - location
+      type: custom
+    -
+      heading: Internal
+      type: heading
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
+      key: 'folder:fd5c4147-8918-496c-b994-7c3a9df5230f'
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+      type: native
   craft\elements\Entry:
     -
       defaultSort:
@@ -217,36 +208,21 @@ fs:
     hasUrls: true
     name: 'Images Transforms Local'
     settings:
-      path: '@webroot/assets/transforms'
+      path: '@webroot/dist/transforms'
     type: craft\fs\Local
-    url: '@web/assets/transforms'
-  images_local:
+    url: '@weburl/dist/transforms'
+  volumes_local:
     hasUrls: true
-    name: 'Images Local'
+    name: 'Volumes Local'
     settings:
-      path: '@webroot/files/images'
+      path: '@webroot/volumes'
     type: craft\fs\Local
-    url: '@web/files/images'
-  tempimages_local:
-    hasUrls: true
-    name: 'Temp Images Local'
-    settings:
-      path: '@webroot/files/temp'
-    type: craft\fs\Local
-    url: '@web/files/temp'
-  userPhotos_local:
-    hasUrls: true
-    name: 'User Photos Local'
-    settings:
-      path: '@webroot/files/userphotos'
-    type: craft\fs\Local
-    url: '@web/files/userphotos'
+    url: '@weburl/volumes'
 meta:
   __names__:
     1a974179-ff63-42af-9f2f-b2c34cbfefe2: Munich # Munich
     1e1a1488-33d1-46dd-91d6-f7d1a7ef1434: Topic # Topic
     1efc3da2-ad70-455b-8d5a-4f712d3e3482: 'Berlin Türkçe' # Berlin Türkçe
-    3b60e4f9-36bb-4456-bee5-67160b5a3108: 'User Photos' # User Photos
     3bb09a1c-cb36-438e-b8d5-0b35b0965f4e: Berlin # Berlin
     3c3640d4-1332-4e1a-8745-aab9d3646d81: 'Articles Index' # Articles Index
     3e35a043-a62e-4ede-acd6-44dfb92d6914: 'Site Name' # Site Name
@@ -305,7 +281,6 @@ meta:
     e0cd6b9d-eb8b-4934-8c3d-704ca2f149bb: 'Secondary Image' # Secondary Image
     eb6b24cc-83d7-416f-be4b-d002c7688b58: Copyright # Copyright
     eb3278b0-e772-48a7-84b6-fae65d958234: 'Locations Index' # Locations Index
-    ed627edd-73bd-4b75-8684-f410bf4e4b9d: 'Temp Images' # Temp Images
     f0cfaa93-fb17-46e7-aeff-cc02cf25aeee: 'Munich English' # Munich English
     fbf00eb2-4a16-40ca-96bb-3fadd2bf459c: Page # Page
     fde6b0e6-02b7-426c-9600-7c39eaf0a485: Location # Location

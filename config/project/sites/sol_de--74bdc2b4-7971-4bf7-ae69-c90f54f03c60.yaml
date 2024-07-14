@@ -1,4 +1,4 @@
-baseUrl: '@web/soltau/de'
+baseUrl: '@weburl/soltau/de'
 enabled: '1'
 handle: sol_de
 hasUrls: true

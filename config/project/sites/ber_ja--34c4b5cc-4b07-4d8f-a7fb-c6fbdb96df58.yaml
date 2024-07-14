@@ -1,4 +1,4 @@
-baseUrl: '@web/berlin/ja'
+baseUrl: '@weburl/berlin/ja'
 enabled: '1'
 handle: ber_ja
 hasUrls: true

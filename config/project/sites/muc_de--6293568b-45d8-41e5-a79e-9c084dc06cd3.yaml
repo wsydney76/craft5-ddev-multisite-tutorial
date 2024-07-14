@@ -1,4 +1,4 @@
-baseUrl: '@web/muenchen/de'
+baseUrl: '@weburl/muenchen/de'
 enabled: '1'
 handle: muc_de
 hasUrls: true

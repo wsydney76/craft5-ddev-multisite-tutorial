@@ -1,4 +1,4 @@
-baseUrl: '@web/hamburg/en'
+baseUrl: '@weburl/hamburg/en'
 enabled: '1'
 handle: ham_en
 hasUrls: true

@@ -5,6 +5,4 @@
 /node_modules
 /templates/test
 /vendor
-/web/assets
-/web/cpresources
-/web/files/temp
+/web/dist

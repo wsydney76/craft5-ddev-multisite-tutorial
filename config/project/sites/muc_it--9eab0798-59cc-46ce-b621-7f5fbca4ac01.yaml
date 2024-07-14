@@ -1,4 +1,4 @@
-baseUrl: '@web/monaco/it'
+baseUrl: '@weburl/monaco/it'
 enabled: '1'
 handle: muc_it
 hasUrls: true
