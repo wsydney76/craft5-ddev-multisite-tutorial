@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d
-dateModified: 1721120867
+dateModified: 1721121057
 elementSources:
   craft\elements\Asset:
     -
@@ -251,6 +251,7 @@ meta:
     171bbc5b-3ff0-4585-b77f-7b428f9e1bb4: 'Default Site Home' # Default Site Home
     315bfd90-74a8-4b2a-acd2-f32b780c71cb: Location # Location
     503ce48e-30a9-4ab1-9dd4-89fec70a385c: 'Image Style' # Image Style
+    504db783-f688-454b-8fbf-a242e8aecd38: 'CP Files' # CP Files
     574daf56-8e00-42e1-9bcb-23461245101f: Soltau # Soltau
     599c71b9-f295-4a4d-b1c3-7792f4da3dd6: Topic # Topic
     733a21de-d87c-45c5-9a67-c91c5a3f6172: 'Munich Hebrew' # Munich Hebrew
