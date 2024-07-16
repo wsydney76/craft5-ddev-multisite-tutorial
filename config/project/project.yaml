@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: ed627edd-73bd-4b75-8684-f410bf4e4b9d
-dateModified: 1721121057
+dateModified: 1721121313
 elementSources:
   craft\elements\Asset:
     -
@@ -74,16 +74,13 @@ elementSources:
       heading: Internal
       type: heading
     -
-      defaultSort:
-        - dateCreated
-        - desc
-      disabled: false
-      key: 'folder:fd5c4147-8918-496c-b994-7c3a9df5230f'
-      tableAttributes:
-        - filename
-        - size
-        - dateModified
-        - link
+      heading: Internal
+      type: heading
+    -
+      key: 'volume:504db783-f688-454b-8fbf-a242e8aecd38' # CP Files
+      type: native
+    -
+      key: 'folder:776dd471-eea1-4953-9289-ebfcf8e07f95'
       type: native
   craft\elements\Entry:
     -
