@@ -11,6 +11,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2024-08-08T09:21:30+02:00'
             disabled: false
             elementCondition: null
             id: null
@@ -39,6 +40,7 @@ fieldLayouts:
             attribute: alt
             class: null
             cols: null
+            dateAdded: '2024-08-08T09:21:30+02:00'
             disabled: false
             elementCondition: null
             id: null
@@ -61,6 +63,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             fieldUid: eb6b24cc-83d7-416f-be4b-d002c7688b58 # Copyright
             handle: null
@@ -76,6 +79,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             template: _cp/related-entries.twig
             type: craft\fieldlayoutelements\Template

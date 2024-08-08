@@ -7,6 +7,7 @@ tabs:
         autocomplete: false
         autocorrect: true
         class: null
+        dateAdded: '2024-08-08T09:21:30+02:00'
         disabled: false
         elementCondition: null
         id: null
@@ -27,7 +28,7 @@ tabs:
         tip: null
         title: null
         type: craft\fieldlayoutelements\users\UsernameField
-        uid: f071fbf6-e628-4122-9068-1ac511b957bd
+        uid: 7cf28728-db88-4170-a634-1aeea241e5c0
         userCondition: null
         warning: null
         width: 100
@@ -37,6 +38,7 @@ tabs:
         autocomplete: false
         autocorrect: true
         class: null
+        dateAdded: '2024-08-08T09:21:30+02:00'
         disabled: false
         elementCondition: null
         id: null
@@ -58,11 +60,12 @@ tabs:
         tip: null
         title: null
         type: craft\fieldlayoutelements\users\FullNameField
-        uid: 264e55df-a0aa-478c-bbf2-9653e31a9040
+        uid: 35f054a2-2b65-4f11-95f1-ca1d5bf88134
         userCondition: null
         warning: null
         width: 100
       -
+        dateAdded: '2024-08-08T09:21:30+02:00'
         elementCondition: null
         id: null
         includeInCards: false
@@ -73,7 +76,7 @@ tabs:
         requirable: false
         tip: null
         type: craft\fieldlayoutelements\users\PhotoField
-        uid: 2e4476f7-a02e-4e52-b966-6637b1d8cf38
+        uid: cd2b7d32-08cf-42f9-a20f-806a9e48287a
         userCondition: null
         warning: null
         width: 100
@@ -82,6 +85,7 @@ tabs:
         autocomplete: false
         autocorrect: true
         class: null
+        dateAdded: '2024-08-08T09:21:30+02:00'
         disabled: false
         elementCondition: null
         id: null
@@ -102,9 +106,9 @@ tabs:
         tip: null
         title: null
         type: craft\fieldlayoutelements\users\EmailField
-        uid: 2b9a7125-4a97-46d7-9c13-290de9078f3c
+        uid: a73e1bf5-1ba0-4ec6-a61e-ba20ea184ec5
         userCondition: null
         width: 100
     name: Content
-    uid: e5a285b9-e905-4adf-b539-ad65571b8eda
+    uid: b0fe7d58-47d4-4df7-93e5-387640f09624
     userCondition: null

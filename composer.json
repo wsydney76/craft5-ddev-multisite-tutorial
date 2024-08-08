@@ -1,6 +1,6 @@
 {
   "description": "Minimum preconfigured starter for Craft 4",
-  "name": "wsydney76/craft4_project",
+  "name": "wsydney76/craft5_multisite_tutorial",
   "version": "1.0.0",
   "license": "Unlicense",
   "require": {

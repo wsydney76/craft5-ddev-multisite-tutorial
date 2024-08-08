@@ -10,6 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2024-08-08T09:21:30+02:00'
             disabled: false
             elementCondition: null
             id: null
@@ -35,6 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             fieldUid: 8cdefc82-9e0e-4dae-8feb-1609c6c9873b # Single Line Text
             handle: heading
@@ -50,6 +52,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             fieldUid: c7a4af96-920c-42c0-b6d8-202ab522bdab # List Item Image
             handle: null
@@ -65,6 +68,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             fieldUid: 9e2e3c4b-bd17-46b3-97f0-a4f6605b93d9 # Text
             handle: null
@@ -80,6 +84,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             fieldUid: 6e507a59-e39c-49c8-9d8b-2066317bda3f # Location
             handle: null
@@ -95,6 +100,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             fieldUid: 164e611f-6177-4d07-a94e-8aaf8395299c # Date and Time
             handle: null
@@ -110,6 +116,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-08-08T09:21:30+02:00'
             elementCondition: null
             fieldUid: a82ceefa-7dad-42b6-bb96-63b0f115ffdf # External Link
             handle: null
