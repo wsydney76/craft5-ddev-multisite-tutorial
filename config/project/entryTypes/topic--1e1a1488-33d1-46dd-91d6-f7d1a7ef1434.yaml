@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-09-12T09:46:38+02:00'
+            dateAdded: '2024-10-05T13:38:59+02:00'
             disabled: false
             elementCondition: null
             id: null
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-09-12T09:46:38+02:00'
+            dateAdded: '2024-10-05T13:38:59+02:00'
             elementCondition: null
             fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
             handle: null
@@ -52,7 +52,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-09-12T09:46:38+02:00'
+            dateAdded: '2024-10-05T13:38:59+02:00'
             elementCondition: null
             fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
             handle: null
@@ -74,7 +74,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-09-12T09:46:38+02:00'
+            dateAdded: '2024-10-05T13:38:59+02:00'
             elementCondition: null
             template: _cp/related-entries.twig
             type: craft\fieldlayoutelements\Template
