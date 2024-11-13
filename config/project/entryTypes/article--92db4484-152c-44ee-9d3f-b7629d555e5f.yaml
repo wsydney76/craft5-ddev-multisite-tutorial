@@ -6,9 +6,10 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             template: _cp/drafts
+            templateMode: site
             type: craft\fieldlayoutelements\Template
             uid: ec6857b8-375f-4503-8c91-ac18df77235e
             userCondition: null
@@ -18,7 +19,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             disabled: false
             elementCondition: null
             id: null
@@ -33,7 +34,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -44,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             fieldUid: 489638d6-dd95-43c0-a6cd-cca5a8898feb # Toggle
             handle: featured
@@ -60,7 +61,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             fieldUid: 7df417e8-1eea-46d8-85a7-2a20370a881e # Featured Image
             handle: null
@@ -76,7 +77,7 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             fieldUid: 087d6426-bc8d-4c44-b207-23dd11d11345 # Topics
             handle: null
@@ -92,7 +93,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             fieldUid: 992f51d0-e22b-4c12-a6ba-d098fa334cd3 # Related Entries
             handle: null
@@ -108,7 +109,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             fieldUid: 85898001-9c9c-4d46-abf9-a928e44f0d48 # Body Content
             handle: null
@@ -130,17 +131,19 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             template: _cp/local-images
+            templateMode: site
             type: craft\fieldlayoutelements\Template
             uid: c03ef924-c64d-4fb4-9509-0687e16b9cc6
             userCondition: null
             width: 100
           -
-            dateAdded: '2024-10-23T16:09:10+02:00'
+            dateAdded: '2024-11-13T11:35:30+01:00'
             elementCondition: null
             template: _cp/related-entries
+            templateMode: site
             type: craft\fieldlayoutelements\Template
             uid: 9cc0a276-a1cf-4c5e-953c-020e72a6d5be
             userCondition: null

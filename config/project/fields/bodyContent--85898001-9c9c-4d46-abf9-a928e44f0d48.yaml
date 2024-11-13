@@ -5,6 +5,7 @@ name: 'Body Content'
 searchable: true
 settings:
   createButtonLabel: 'New content block'
+  defaultIndexViewMode: cards
   entryTypes:
     - 81e6a0d6-13c5-47ad-a9e6-c2181276db9c # Text
     - 3711281e-d315-423d-a4b3-73aecdb65eac # List Item
