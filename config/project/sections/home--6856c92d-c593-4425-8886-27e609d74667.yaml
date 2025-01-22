@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - c780bb7a-337c-46ba-95c4-c0dcbfcb457d # Home
+  -
+    uid: c780bb7a-337c-46ba-95c4-c0dcbfcb457d # Home
 handle: home
 maxAuthors: 1
 name: Home

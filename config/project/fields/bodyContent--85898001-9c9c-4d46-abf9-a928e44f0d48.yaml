@@ -7,11 +7,31 @@ settings:
   createButtonLabel: 'New content block'
   defaultIndexViewMode: cards
   entryTypes:
-    - 81e6a0d6-13c5-47ad-a9e6-c2181276db9c # Text
-    - 3711281e-d315-423d-a4b3-73aecdb65eac # List Item
-    - 69164545-5879-454d-a57e-f703ca431331 # Image
-    - ac457f93-1a50-473e-9983-a899a7f0bed7 # Heading
-    - da7ce2e3-54b0-43df-9798-32a617f8b887 # Quote
+    -
+      __assoc__:
+        -
+          - uid
+          - 81e6a0d6-13c5-47ad-a9e6-c2181276db9c # Text
+    -
+      __assoc__:
+        -
+          - uid
+          - 3711281e-d315-423d-a4b3-73aecdb65eac # List Item
+    -
+      __assoc__:
+        -
+          - uid
+          - 69164545-5879-454d-a57e-f703ca431331 # Image
+    -
+      __assoc__:
+        -
+          - uid
+          - ac457f93-1a50-473e-9983-a899a7f0bed7 # Heading
+    -
+      __assoc__:
+        -
+          - uid
+          - da7ce2e3-54b0-43df-9798-32a617f8b887 # Quote
   includeTableView: false
   maxEntries: null
   minEntries: null

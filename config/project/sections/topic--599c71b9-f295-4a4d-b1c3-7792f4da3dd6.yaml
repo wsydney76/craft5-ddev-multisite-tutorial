@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 1e1a1488-33d1-46dd-91d6-f7d1a7ef1434 # Topic
+  -
+    uid: 1e1a1488-33d1-46dd-91d6-f7d1a7ef1434 # Topic
 handle: topic
 maxAuthors: 1
 name: Topic

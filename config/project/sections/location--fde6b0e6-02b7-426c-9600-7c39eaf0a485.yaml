@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 315bfd90-74a8-4b2a-acd2-f32b780c71cb # Location
+  -
+    uid: 315bfd90-74a8-4b2a-acd2-f32b780c71cb # Location
 handle: location
 maxAuthors: 1
 name: Location
