@@ -25,8 +25,8 @@
 
     {% set mainWidth = _globals.get('mainWidth') ?? 'md' %}
     {% set widthClasses = {
-        md: 'max-w-screen-md mx-auto',
-        lg: 'max-w-screen-lg mx-auto'
+        md: 'max-w-(--breakpoint-md) mx-auto',
+        lg: 'max-w-(--breakpoint-lg) mx-auto'
     } %}
 
 {% endapply -%}
@@ -42,7 +42,7 @@
 <a class="sr-only text-xl focus:not-sr-only" href="#content">{{ 'Skip to content'|t }}</a>
 
 {# make the header a bit wider #}
-<header class="max-w-screen-lg mx-auto pt-8 pb-12">
+<header class="max-w-(--breakpoint-lg) mx-auto pt-8 pb-12">
 
     {% include '_layouts/partials/topbar.twig' with {entry} only %}
 

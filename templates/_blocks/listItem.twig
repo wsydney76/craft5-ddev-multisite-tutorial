@@ -70,7 +70,7 @@
 
     {% if block.externalLink %}
         {# Giving a bit more space, overwriting margins set by space-y #}
-        <div class="!mt-12">
+        <div class="mt-12!">
             {# Use an include for button like like in order to avoid repeating classes over and over  #}
             {% include '_layouts/partials/button.twig' with {
                 href: block.externalLink,
