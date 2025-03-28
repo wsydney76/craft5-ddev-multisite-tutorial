@@ -1,8 +1,8 @@
 {
-  "name": "craft_project",
+  "name": "multisite_tutorial",
   "type": "module",
   "version": "2.0.0",
-  "description": "Minimum preconfigured Craft Starter",
+  "description": "Craft 5 Multisite Tutorial",
   "author": "wsydney76",
   "private": true,
   "license": "Unlicense",
