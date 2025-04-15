@@ -6,12 +6,15 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: 1
   selectionLabel: 'Add a topic'
   showCardsInGrid: true
   showSiteMenu: false
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:599c71b9-f295-4a4d-b1c3-7792f4da3dd6' # Topic
   targetSiteId: null

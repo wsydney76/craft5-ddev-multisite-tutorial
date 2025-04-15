@@ -1,7 +1,0 @@
-allowPublicRegistration: false
-deactivateByDefault: false
-defaultGroup: ''
-photoSubpath: userphotos
-photoVolumeUid: 504db783-f688-454b-8fbf-a242e8aecd38 # CP Files
-requireEmailVerification: true
-validateOnPublicRegistration: false

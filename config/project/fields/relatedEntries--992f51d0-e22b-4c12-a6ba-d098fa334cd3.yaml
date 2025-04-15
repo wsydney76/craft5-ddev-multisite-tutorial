@@ -6,12 +6,15 @@ searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
   showCardsInGrid: true
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:7a045fb7-ed74-4c72-8482-fc700ab663ca' # Article
     - 'section:84b98802-2548-4aed-b67e-fc97f6ed9e30' # Page

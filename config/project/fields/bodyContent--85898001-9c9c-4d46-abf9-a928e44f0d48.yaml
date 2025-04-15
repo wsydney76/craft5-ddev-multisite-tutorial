@@ -6,6 +6,7 @@ searchable: true
 settings:
   createButtonLabel: 'New content block'
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
