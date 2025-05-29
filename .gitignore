@@ -6,3 +6,4 @@
 /templates/test
 /vendor
 /web/dist
+.ddev/.env.web
