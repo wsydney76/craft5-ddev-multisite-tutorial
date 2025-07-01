@@ -12,6 +12,7 @@ settings:
   minRelations: 1
   selectionLabel: 'Add a topic'
   showCardsInGrid: true
+  showSearchInput: true
   showSiteMenu: false
   showUnpermittedEntries: true
   showUnpermittedSections: true

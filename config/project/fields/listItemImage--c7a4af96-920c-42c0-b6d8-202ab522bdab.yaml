@@ -58,6 +58,7 @@ settings:
                 - 1
   selectionLabel: 'Select an image'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

@@ -24,6 +24,7 @@ settings:
   restrictedLocationSubpath: icons
   selectionLabel: 'Select an icon'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

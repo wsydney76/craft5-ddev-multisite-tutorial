@@ -12,6 +12,7 @@ settings:
   minRelations: null
   selectionLabel: null
   showCardsInGrid: true
+  showSearchInput: true
   showSiteMenu: true
   showUnpermittedEntries: true
   showUnpermittedSections: true

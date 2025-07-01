@@ -24,6 +24,7 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: 'Select an image'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

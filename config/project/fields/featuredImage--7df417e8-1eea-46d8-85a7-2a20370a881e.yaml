@@ -58,6 +58,7 @@ settings:
                 - 1
   selectionLabel: null
   showCardsInGrid: true
+  showSearchInput: true
   showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
