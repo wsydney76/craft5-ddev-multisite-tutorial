@@ -1,7 +1,7 @@
 {
-  "description": "Minimum preconfigured starter for Craft 4",
+  "description": "Multisite Tutorial for Craft CMS 5",
   "name": "wsydney76/craft5_multisite_tutorial",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "Unlicense",
   "require": {
     "craftcms/cms": "^5.8.0",

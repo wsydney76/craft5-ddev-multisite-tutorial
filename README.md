@@ -1,15 +1,15 @@
-# Craft 4 Multi-Site Tutorial
+# Craft 5 Multi-Site Tutorial
 
-This is result of a Craft CMS multi-site tutorial/workshop.
+This is result of a Craft CMS multi-site tutorial/workshop. (Originally for Craft 4, now provisionally to Craft 5)
 
 ## Install with DDEV
 
-* Clone this repository `git clone https://github.com/wsydney76/craft4-ddev-multisite-tutorial <dir> && cd <dir>`
+* Clone this repository `git clone https://github.com/wsydney76/craft5-ddev-multisite-tutorial <dir> && cd <dir>`
 * Run `bash setup/install <dir>`. There will be a user with the credentials `admin/password`.
 
 ## Install without DDEV
 
-* Clone this repository `git clone https://github.com/wsydney76/craft4-ddev-multisite-tutorial <dir> && cd <dir>`
+* Clone this repository `git clone https://github.com/wsydney76/craft5-ddev-multisite-tutorial <dir> && cd <dir>`
 * Prepare webserver and database as usual
 * Manually execute the steps in `setup/install` in the root directory of the project.
 
